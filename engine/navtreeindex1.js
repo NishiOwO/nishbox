@@ -1,5 +1,12 @@
 var NAVTREEINDEX1 =
 {
+"structgf__texture__t.html#a6f2bc2d54ca5a6ab073a98fb4f4fbfc4":[2,0,13,0],
+"structgf__texture__t.html#a7746f1b9059b336d89155945fc48c027":[2,0,13,1],
+"structgf__texture__t.html#abfc99c0749d88e9b04a3ee0e4e5e2854":[2,0,13,4],
+"structgf__thread__context__t.html":[2,0,14],
+"structgf__thread__context__t.html#a5ffa4a8254033678e59129ff895271ba":[2,0,14,0],
+"structgf__thread__context__t.html#a7f45b84a451f10d7dd6d3bef0f0f02ac":[2,0,14,1],
+"structgf__thread__t.html":[2,0,15],
 "structgf__triangle__t.html":[2,0,16],
 "structgf__triangle__t.html#a48fc77b2e4a08afad388a173535162c5":[2,0,16,0],
 "structgf__triangle__t.html#a81432658e211ca1024fd461e126a4531":[2,0,16,1],

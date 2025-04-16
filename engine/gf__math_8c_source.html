@@ -102,56 +102,77 @@ $(document).ready(function(){initNavTree('gf__math_8c_source.html',''); initResi
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;<a class="code" href="gf__pre_8h.html">gf_pre.h</a>&gt;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/* External library */</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;ode/odemath.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/* Interface */</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;<a class="code" href="gf__math_8h.html">gf_math.h</a>&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/* Engine */</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/* Standard */</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="math_8h.html">math.h</a>&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="gf__math_8h.html#af8c63fbeafbaa0df51893fb06459fb6b">   16</a></span><span class="keywordtype">float</span> gf_math_log2(<span class="keywordtype">float</span> x) { <span class="keywordflow">return</span> log(x) / log(2); }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="gf__math_8h.html#a2991324e0d79cbf42ffac73417b33ec5">   18</a></span><span class="keywordtype">void</span> gf_math_normal(<a class="code hl_typedef" href="math_8h.html#a87761318a5a7b9ae8bf2b619fc9359a2">gf_vector_t</a>* r, <a class="code hl_typedef" href="math_8h.html#a87761318a5a7b9ae8bf2b619fc9359a2">gf_vector_t</a> v0, <a class="code hl_typedef" href="math_8h.html#a87761318a5a7b9ae8bf2b619fc9359a2">gf_vector_t</a> v1, <a class="code hl_typedef" href="math_8h.html#a87761318a5a7b9ae8bf2b619fc9359a2">gf_vector_t</a> v2) {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordtype">int</span>         i;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        dReal       length;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_typedef" href="math_8h.html#a87761318a5a7b9ae8bf2b619fc9359a2">gf_vector_t</a> vec;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        dReal       res[3];</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        dReal       tmp0[3];</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        dReal       tmp1[3];</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        dReal       a[3]; <span class="comment">/* v1 - v0 */</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        dReal       b[3]; <span class="comment">/* v2 - v0 */</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_define" href="gf__math_8h.html#a5b1863b8bfe43fa4de2b52a6e9dfd6bf">GF_VECTOR_COPY</a>(tmp0, v1);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_define" href="gf__math_8h.html#a5b1863b8bfe43fa4de2b52a6e9dfd6bf">GF_VECTOR_COPY</a>(tmp1, v0);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        dSubtractVectors3(a, tmp0, tmp1); <span class="comment">/* v1 - v0 */</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_define" href="gf__math_8h.html#a5b1863b8bfe43fa4de2b52a6e9dfd6bf">GF_VECTOR_COPY</a>(tmp0, v2);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_define" href="gf__math_8h.html#a5b1863b8bfe43fa4de2b52a6e9dfd6bf">GF_VECTOR_COPY</a>(tmp1, v0);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        dSubtractVectors3(b, tmp0, tmp1); <span class="comment">/* v2 - v0 */</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        dCalcVectorCross3(res, a, b);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        length = dCalcVectorLength3(res);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_define" href="gf__math_8h.html#a5b1863b8bfe43fa4de2b52a6e9dfd6bf">GF_VECTOR_COPY</a>(res, vec);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        vec[0] /= length;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        vec[1] /= length;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        vec[2] /= length;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        memcpy(*r, vec, <span class="keyword">sizeof</span>(vec));</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/* Interface */</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;<a class="code" href="gf__math_8h.html">gf_math.h</a>&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/* Engine */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/* Standard */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;<a class="code" href="math_8h.html">math.h</a>&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="gf__math_8h.html#a018423cb05adf480f9c3f28f304d1c47">   15</a></span><span class="keywordtype">double</span> gf_math_log2(<span class="keywordtype">double</span> x) { <span class="keywordflow">return</span> log(x) / log(2); }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="gf__math_8h.html#a3bd2afc9ff0e67e60afef9fe82553726">   17</a></span><span class="keywordtype">void</span> gf_math_normalize(<a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> v) {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordtype">double</span> x = v[0];</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordtype">double</span> y = v[1];</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">double</span> z = v[2];</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordtype">double</span> length;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        x *= x;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        y *= y;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        z *= z;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        length = sqrt(x + y + z);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">if</span>(length &gt; 0) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                length = (double)1 / length;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                length = 0;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        v[0] *= length;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        v[1] *= length;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        v[2] *= length;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
 </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="gf__math_8h.html#a5438b2f7f1324cdd664f2b823faa1ba6">   38</a></span><span class="keywordtype">void</span> gf_math_normal(<a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> r, <a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> v0, <a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> v1, <a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> v2) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> tmp0;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> tmp1;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        gf_math_subtract(tmp0, v1, v0);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        gf_math_subtract(tmp1, v2, v0);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        gf_math_multiply(r, tmp0, tmp1);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        gf_math_normalize(r);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="gf__math_8h.html#a9df6d1b30bea0b200582e2873bddd113">   50</a></span><span class="keywordtype">void</span> gf_math_subtract(<a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> r, <a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> v0, <a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> v1) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        r[0] = v0[0] - v1[0];</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        r[1] = v0[1] - v1[1];</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        r[2] = v0[2] - v1[2];</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="gf__math_8h.html#a394ebd35e2cddf28c86a45dad759fbee">   56</a></span><span class="keywordtype">void</span> gf_math_multiply(<a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> r, <a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> v0, <a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> v1) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        r[0] = v0[1] * v1[2] - v0[2] * v1[1];</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        r[1] = v0[2] * v1[0] - v0[0] * v1[2];</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        r[2] = v0[0] * v1[1] - v0[1] * v1[0];</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="gf__math_8h.html#aac8f6a22f2880f5b86b20a191a662333">   62</a></span><span class="keywordtype">double</span> gf_math_cot(<span class="keywordtype">double</span> x) { <span class="keywordflow">return</span> (<span class="keywordtype">double</span>)1 / tan(x); }</div>
 <div class="ttc" id="agf__math_8h_html"><div class="ttname"><a href="gf__math_8h.html">gf_math.h</a></div><div class="ttdoc">Math.</div></div>
-<div class="ttc" id="agf__math_8h_html_a5b1863b8bfe43fa4de2b52a6e9dfd6bf"><div class="ttname"><a href="gf__math_8h.html#a5b1863b8bfe43fa4de2b52a6e9dfd6bf">GF_VECTOR_COPY</a></div><div class="ttdeci">#define GF_VECTOR_COPY(from, to)</div><div class="ttdoc">Copy vector.</div><div class="ttdef"><b>Definition</b> <a href="gf__math_8h_source.html#l00026">gf_math.h:26</a></div></div>
 <div class="ttc" id="agf__pre_8h_html"><div class="ttname"><a href="gf__pre_8h.html">gf_pre.h</a></div><div class="ttdoc">Required headers before anything.</div></div>
 <div class="ttc" id="amath_8h_html"><div class="ttname"><a href="math_8h.html">math.h</a></div><div class="ttdoc">Type definitions related to math.</div></div>
-<div class="ttc" id="amath_8h_html_a87761318a5a7b9ae8bf2b619fc9359a2"><div class="ttname"><a href="math_8h.html#a87761318a5a7b9ae8bf2b619fc9359a2">gf_vector_t</a></div><div class="ttdeci">double gf_vector_t[4]</div><div class="ttdoc">Vector.</div><div class="ttdef"><b>Definition</b> <a href="math_8h_source.html#l00025">math.h:25</a></div></div>
+<div class="ttc" id="amath_8h_html_a866f43b3ea5386cb9497738f1eec3d88"><div class="ttname"><a href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a></div><div class="ttdeci">double gf_math_vector_t[4]</div><div class="ttdoc">Vector.</div><div class="ttdef"><b>Definition</b> <a href="math_8h_source.html#l00025">math.h:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,4 +1,4 @@
 var math_8h =
 [
-    [ "gf_vector_t", "math_8h.html#a87761318a5a7b9ae8bf2b619fc9359a2", null ]
+    [ "gf_math_vector_t", "math_8h.html#a866f43b3ea5386cb9497738f1eec3d88", null ]
 ];

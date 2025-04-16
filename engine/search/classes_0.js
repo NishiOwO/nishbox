@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['gf_5fcolor_5ft_0',['gf_color_t',['../structgf__color__t.html',1,'']]],
-  ['gf_5fdraw_5fdriver_5ft_1',['gf_draw_driver_t',['../structgf__draw__driver__t.html',1,'']]],
-  ['gf_5fdraw_5fdriver_5ftexture_5ft_2',['gf_draw_driver_texture_t',['../structgf__draw__driver__texture__t.html',1,'']]],
-  ['gf_5fdraw_5fplatform_5ft_3',['gf_draw_platform_t',['../structgf__draw__platform__t.html',1,'']]],
-  ['gf_5fdraw_5ft_4',['gf_draw_t',['../structgf__draw__t.html',1,'']]],
-  ['gf_5fengine_5ft_5',['gf_engine_t',['../structgf__engine__t.html',1,'']]],
+  ['gf_5fdraw_5fdriver_5ft_0',['gf_draw_driver_t',['../structgf__draw__driver__t.html',1,'']]],
+  ['gf_5fdraw_5fdriver_5ftexture_5ft_1',['gf_draw_driver_texture_t',['../structgf__draw__driver__texture__t.html',1,'']]],
+  ['gf_5fdraw_5fplatform_5ft_2',['gf_draw_platform_t',['../structgf__draw__platform__t.html',1,'']]],
+  ['gf_5fdraw_5ft_3',['gf_draw_t',['../structgf__draw__t.html',1,'']]],
+  ['gf_5fengine_5ft_4',['gf_engine_t',['../structgf__engine__t.html',1,'']]],
+  ['gf_5fgraphic_5fcolor_5ft_5',['gf_graphic_color_t',['../structgf__graphic__color__t.html',1,'']]],
   ['gf_5fgui_5fbutton_5ft_6',['gf_gui_button_t',['../structgf__gui__button__t.html',1,'']]],
   ['gf_5fgui_5fcomponent_5ft_7',['gf_gui_component_t',['../structgf__gui__component__t.html',1,'']]],
   ['gf_5fgui_5ft_8',['gf_gui_t',['../structgf__gui__t.html',1,'']]],

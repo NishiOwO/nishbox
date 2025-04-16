@@ -1,11 +1,11 @@
 var annotated_dup =
 [
-    [ "gf_color_t", "structgf__color__t.html", "structgf__color__t" ],
     [ "gf_draw_driver_t", "structgf__draw__driver__t.html", null ],
     [ "gf_draw_driver_texture_t", "structgf__draw__driver__texture__t.html", null ],
     [ "gf_draw_platform_t", "structgf__draw__platform__t.html", null ],
     [ "gf_draw_t", "structgf__draw__t.html", "structgf__draw__t" ],
     [ "gf_engine_t", "structgf__engine__t.html", "structgf__engine__t" ],
+    [ "gf_graphic_color_t", "structgf__graphic__color__t.html", "structgf__graphic__color__t" ],
     [ "gf_gui_button_t", "structgf__gui__button__t.html", "structgf__gui__button__t" ],
     [ "gf_gui_component_t", "structgf__gui__component__t.html", "structgf__gui__component__t" ],
     [ "gf_gui_t", "structgf__gui__t.html", "structgf__gui__t" ],

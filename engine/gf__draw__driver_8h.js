@@ -10,5 +10,5 @@ var gf__draw__driver_8h =
     [ "gf_draw_driver_init", "gf__draw__driver_8h.html#ac0df9285870541aacdd7aba0b06eee07", null ],
     [ "gf_draw_driver_register_texture", "gf__draw__driver_8h.html#a034ba7f18e4d2c0395d4116182c47785", null ],
     [ "gf_draw_driver_reshape", "gf__draw__driver_8h.html#af0a260e2df4036c09bebe329c821fc19", null ],
-    [ "gf_draw_driver_set_color", "gf__draw__driver_8h.html#a663f8f0d44a4356e18e6fd109a3b0399", null ]
+    [ "gf_draw_driver_set_color", "gf__draw__driver_8h.html#a2740a2bb536d05c08ca019e66be4b6c6", null ]
 ];

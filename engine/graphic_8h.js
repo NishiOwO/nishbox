@@ -1,4 +1,4 @@
 var graphic_8h =
 [
-    [ "gf_color_t", "structgf__color__t.html", "structgf__color__t" ]
+    [ "gf_graphic_color_t", "structgf__graphic__color__t.html", "structgf__graphic__color__t" ]
 ];

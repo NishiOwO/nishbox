@@ -114,115 +114,184 @@ $(document).ready(function(){initNavTree('gf__graphic_8c_source.html',''); initR
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;<a class="code" href="gf__draw_8h.html">gf_draw.h</a>&gt;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="gf__texture_8h.html">gf_texture.h</a>&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;<a class="code" href="gf__draw__driver_8h.html">gf_draw_driver.h</a>&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/* Standard */</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="gf__graphic_8h.html#ad35db673e213edbadbfd938138c88a4c">   20</a></span><span class="keywordtype">void</span> gf_graphic_begin_2d(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw) {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        glDisable(GL_LIGHTING);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        glDisable(GL_DEPTH_TEST);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        glMatrixMode(GL_PROJECTION);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        glPushMatrix();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        glLoadIdentity();</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        glOrtho(0, draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#adeb3586537ce39bf94c594dec0348346">width</a>, draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#ae300bda23f566c186f873c56c5d32a3f">height</a>, 0, -1, 1);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        glMatrixMode(GL_MODELVIEW);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        glPushMatrix();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        glLoadIdentity();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="gf__math_8h.html">gf_math.h</a>&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/* Standard */</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="gf__graphic_8h.html#ad35db673e213edbadbfd938138c88a4c">   22</a></span><span class="keywordtype">void</span> gf_graphic_begin_2d(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw) {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        glDisable(GL_LIGHTING);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        glDisable(GL_DEPTH_TEST);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        glMatrixMode(GL_PROJECTION);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        glPushMatrix();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        glLoadIdentity();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        glOrtho(0, draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#adeb3586537ce39bf94c594dec0348346">width</a>, draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#ae300bda23f566c186f873c56c5d32a3f">height</a>, 0, -1, 1);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        glMatrixMode(GL_MODELVIEW);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        glPushMatrix();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        glLoadIdentity();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
 </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="gf__graphic_8h.html#acd5d3047cf76b63b2d1161e4e880f446">   32</a></span><span class="keywordtype">void</span> gf_graphic_end_2d(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw) {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        glMatrixMode(GL_MODELVIEW);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        glPopMatrix();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        glMatrixMode(GL_PROJECTION);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="gf__graphic_8h.html#acd5d3047cf76b63b2d1161e4e880f446">   34</a></span><span class="keywordtype">void</span> gf_graphic_end_2d(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        glMatrixMode(GL_MODELVIEW);</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        glPopMatrix();</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        glMatrixMode(GL_MODELVIEW);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        glEnable(GL_DEPTH_TEST);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        glEnable(GL_LIGHTING);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        glMatrixMode(GL_PROJECTION);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        glPopMatrix();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        glMatrixMode(GL_MODELVIEW);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        glEnable(GL_DEPTH_TEST);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        glEnable(GL_LIGHTING);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
 </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="gf__graphic_8h.html#a74f8bf7e2fc346f7d85ecfcea061f3fb">   42</a></span><span class="keywordtype">void</span> gf_graphic_clear(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw) { glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT); }</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="gf__graphic_8h.html#a3544db93ed4ed75c8038bc95a39ffa71">   44</a></span><span class="keywordtype">void</span> gf_graphic_draw_texture_polygon(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw, <a class="code hl_struct" href="structgf__texture__t.html">gf_texture_t</a>* texture, <a class="code hl_struct" href="structgf__color__t.html">gf_color_t</a> color, <span class="keywordtype">int</span> dim, <span class="keywordtype">int</span> npair, ...) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">double</span>  tw = (double)texture-&gt;<a class="code hl_variable" href="structgf__texture__t.html#abfc99c0749d88e9b04a3ee0e4e5e2854">width</a> / texture-&gt;<a class="code hl_variable" href="structgf__texture__t.html#a0640d6993c4de94f7e51374c12ef7e35">internal_width</a>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordtype">double</span>  th = (double)texture-&gt;<a class="code hl_variable" href="structgf__texture__t.html#a7746f1b9059b336d89155945fc48c027">height</a> / texture-&gt;<a class="code hl_variable" href="structgf__texture__t.html#a3de5592e9caad1edfd93a45644a508e5">internal_height</a>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">int</span>     i;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        va_list va;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        va_start(va, npair);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">if</span>(dim == 2) gf_graphic_begin_2d(draw);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        gf_draw_driver_begin_texture_2d(draw, texture);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        gf_draw_driver_set_color(draw, color);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        glBegin(GL_TRIANGLE_FAN);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">for</span>(i = 0; i &lt; npair; i++) {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <span class="keywordtype">float</span> tx = va_arg(va, <span class="keywordtype">double</span>) * tw;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <span class="keywordtype">float</span> ty = va_arg(va, <span class="keywordtype">double</span>) * th;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                <span class="keywordtype">float</span> x  = va_arg(va, <span class="keywordtype">double</span>);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="keywordtype">float</span> y  = va_arg(va, <span class="keywordtype">double</span>);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                glTexCoord2f(tx, ty);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="keywordflow">if</span>(dim == <a class="code hl_define" href="gf__graphic_8h.html#ab0a76f61b9510881b842dbba4b0b54c0">GF_GRAPHIC_2D</a>) {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                        glVertex2f(x, y);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(dim == <a class="code hl_define" href="gf__graphic_8h.html#a0b9f704231aa067e58c6a8e7a42afdcf">GF_GRAPHIC_3D</a>) {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                        <span class="keywordtype">float</span> z = va_arg(va, <span class="keywordtype">double</span>);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                        glVertex3f(x, y, z);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                }</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        glEnd();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="gf__graphic_8h.html#a74f8bf7e2fc346f7d85ecfcea061f3fb">   44</a></span><span class="keywordtype">void</span> gf_graphic_clear(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw) { glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT); }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="gf__graphic_8h.html#a4157822cc342fa294329ed2c436d53f2">   46</a></span><span class="keywordtype">void</span> gf_graphic_draw_texture_polygon(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw, <a class="code hl_struct" href="structgf__texture__t.html">gf_texture_t</a>* texture, <a class="code hl_struct" href="structgf__graphic__color__t.html">gf_graphic_color_t</a> color, <span class="keywordtype">int</span> dim, <span class="keywordtype">int</span> npair, ...) {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">double</span>  tw = (double)texture-&gt;<a class="code hl_variable" href="structgf__texture__t.html#abfc99c0749d88e9b04a3ee0e4e5e2854">width</a> / texture-&gt;<a class="code hl_variable" href="structgf__texture__t.html#a0640d6993c4de94f7e51374c12ef7e35">internal_width</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordtype">double</span>  th = (double)texture-&gt;<a class="code hl_variable" href="structgf__texture__t.html#a7746f1b9059b336d89155945fc48c027">height</a> / texture-&gt;<a class="code hl_variable" href="structgf__texture__t.html#a3de5592e9caad1edfd93a45644a508e5">internal_height</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordtype">int</span>     i;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        va_list va;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        va_start(va, npair);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">if</span>(dim == 2) gf_graphic_begin_2d(draw);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        gf_draw_driver_begin_texture_2d(draw, texture);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        gf_draw_driver_set_color(draw, color);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        glBegin(GL_TRIANGLE_FAN);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">for</span>(i = 0; i &lt; npair; i++) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                <span class="keywordtype">float</span> tx = va_arg(va, <span class="keywordtype">double</span>) * tw;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="keywordtype">float</span> ty = va_arg(va, <span class="keywordtype">double</span>) * th;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordtype">float</span> x  = va_arg(va, <span class="keywordtype">double</span>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="keywordtype">float</span> y  = va_arg(va, <span class="keywordtype">double</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                glTexCoord2f(tx, ty);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="keywordflow">if</span>(dim == <a class="code hl_define" href="gf__graphic_8h.html#ab0a76f61b9510881b842dbba4b0b54c0">GF_GRAPHIC_2D</a>) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                        glVertex2f(x, y);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(dim == <a class="code hl_define" href="gf__graphic_8h.html#a0b9f704231aa067e58c6a8e7a42afdcf">GF_GRAPHIC_3D</a>) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                        <span class="keywordtype">float</span> z = va_arg(va, <span class="keywordtype">double</span>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                        glVertex3f(x, y, z);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        gf_draw_driver_end_texture_2d(draw);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">if</span>(dim == 2) gf_graphic_end_2d(draw);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        va_end(va);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        glEnd();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        gf_draw_driver_end_texture_2d(draw);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">if</span>(dim == 2) gf_graphic_end_2d(draw);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        va_end(va);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
 </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="gf__graphic_8h.html#a766c4389dc5eac084da75407858bcb43">   79</a></span><span class="keywordtype">void</span> gf_graphic_fill_polygon(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw, <a class="code hl_struct" href="structgf__color__t.html">gf_color_t</a> color, <span class="keywordtype">int</span> dim, <span class="keywordtype">int</span> npair, ...) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordtype">int</span>     i;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        va_list va;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        va_start(va, npair);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        gf_graphic_begin_2d(draw);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="gf__graphic_8h.html#a8ff780a4bcadc008355699101d2a42cc">   81</a></span><span class="keywordtype">void</span> gf_graphic_fill_polygon(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw, <a class="code hl_struct" href="structgf__graphic__color__t.html">gf_graphic_color_t</a> color, <span class="keywordtype">int</span> dim, <span class="keywordtype">int</span> npair, ...) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordtype">int</span>     i;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        va_list va;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        va_start(va, npair);</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        gf_draw_driver_set_color(draw, color);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        glBegin(GL_TRIANGLE_FAN);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">for</span>(i = 0; i &lt; npair; i++) {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                <span class="keywordtype">float</span> x = va_arg(va, <span class="keywordtype">double</span>);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                <span class="keywordtype">float</span> y = va_arg(va, <span class="keywordtype">double</span>);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <span class="keywordflow">if</span>(dim == <a class="code hl_define" href="gf__graphic_8h.html#ab0a76f61b9510881b842dbba4b0b54c0">GF_GRAPHIC_2D</a>) {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                        glVertex2f(x, y);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(dim == <a class="code hl_define" href="gf__graphic_8h.html#a0b9f704231aa067e58c6a8e7a42afdcf">GF_GRAPHIC_3D</a>) {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                        <span class="keywordtype">float</span> z = va_arg(va, <span class="keywordtype">double</span>);</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                        glVertex3f(x, y, z);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                }</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        }</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        glEnd();</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        gf_graphic_end_2d(draw);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        va_end(va);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        gf_graphic_begin_2d(draw);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        gf_draw_driver_set_color(draw, color);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        glBegin(GL_TRIANGLE_FAN);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">for</span>(i = 0; i &lt; npair; i++) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <span class="keywordtype">float</span> x = va_arg(va, <span class="keywordtype">double</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                <span class="keywordtype">float</span> y = va_arg(va, <span class="keywordtype">double</span>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                <span class="keywordflow">if</span>(dim == <a class="code hl_define" href="gf__graphic_8h.html#ab0a76f61b9510881b842dbba4b0b54c0">GF_GRAPHIC_2D</a>) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                        glVertex2f(x, y);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(dim == <a class="code hl_define" href="gf__graphic_8h.html#a0b9f704231aa067e58c6a8e7a42afdcf">GF_GRAPHIC_3D</a>) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                        <span class="keywordtype">float</span> z = va_arg(va, <span class="keywordtype">double</span>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                        glVertex3f(x, y, z);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        glEnd();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        gf_graphic_end_2d(draw);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        va_end(va);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
+</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="gf__graphic_8h.html#a95e7c86d8e9b64501af7de7268f6d74d">  108</a></span><span class="keywordtype">void</span> gf_graphic_perspective(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw, <span class="keywordtype">double</span> fovy, <span class="keywordtype">double</span> znear, <span class="keywordtype">double</span> zfar) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordtype">double</span>   aspect = (double)draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#adeb3586537ce39bf94c594dec0348346">width</a> / (<span class="keywordtype">double</span>)draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#ae300bda23f566c186f873c56c5d32a3f">height</a>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordtype">double</span>   f      = gf_math_cot(fovy / 180 * <a class="code hl_define" href="gf__math_8h.html#a8bf10c0638a206ac572807e90508b6b5">GF_MATH_PI</a> / 2);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        GLdouble matrix[16];</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordtype">int</span>      i;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">for</span>(i = 0; i &lt; 16; i++) matrix[i] = 0;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        matrix[4 * 0 + 0] = f / aspect;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        matrix[4 * 1 + 1] = f;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        matrix[4 * 2 + 2] = (zfar + znear) / (znear - zfar);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        matrix[4 * 3 + 2] = ((double)2 * zfar * znear) / (znear - zfar);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        matrix[4 * 2 + 3] = -1;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        glLoadIdentity();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        glLoadMatrixd(matrix);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>}</div>
+</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="foldopen" id="foldopen00125" data-start="{" data-end="}">
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="gf__graphic_8h.html#af8285b506b90125960bf01b427a9a883">  125</a></span><a class="code hl_define" href="gf__macro_8h.html#a64ddd31b0795e397b5d944e6f1821357">GF_EXPORT</a> <span class="keywordtype">void</span> gf_graphic_set_camera(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw) {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        GLdouble         matrix[16];</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> f;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> up;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> s;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <a class="code hl_typedef" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a> u;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordtype">int</span>              i;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        f[0] = draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#a28a0e4624401155ff09056d1994f69f2">lookat</a>[0] - draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#ac8333a3ac4ec20cc31dffe69cf9fb19b">camera</a>[0];</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        f[1] = draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#a28a0e4624401155ff09056d1994f69f2">lookat</a>[1] - draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#ac8333a3ac4ec20cc31dffe69cf9fb19b">camera</a>[1];</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        f[2] = draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#a28a0e4624401155ff09056d1994f69f2">lookat</a>[2] - draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#ac8333a3ac4ec20cc31dffe69cf9fb19b">camera</a>[2];</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        gf_math_normalize(f);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        up[0] = 0;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        up[1] = 1;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        up[2] = 0;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        gf_math_normalize(up);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        gf_math_multiply(s, f, up);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        gf_math_normalize(s);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        gf_math_multiply(u, s, f);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">for</span>(i = 0; i &lt; 16; i++) matrix[i] = 0;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        matrix[4 * 0 + 0] = s[0];</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        matrix[4 * 1 + 0] = s[1];</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        matrix[4 * 2 + 0] = s[2];</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        matrix[4 * 0 + 1] = u[0];</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        matrix[4 * 1 + 1] = u[1];</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        matrix[4 * 2 + 1] = u[2];</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        matrix[4 * 0 + 2] = -f[0];</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        matrix[4 * 1 + 2] = -f[1];</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        matrix[4 * 2 + 2] = -f[2];</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        matrix[4 * 3 + 3] = 1;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        glLoadIdentity();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        glLoadMatrixd(matrix);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        glTranslated(-draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#ac8333a3ac4ec20cc31dffe69cf9fb19b">camera</a>[0], -draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#ac8333a3ac4ec20cc31dffe69cf9fb19b">camera</a>[1], -draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#ac8333a3ac4ec20cc31dffe69cf9fb19b">camera</a>[2]);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>}</div>
 </div>
 <div class="ttc" id="agf__draw_8h_html"><div class="ttname"><a href="gf__draw_8h.html">gf_draw.h</a></div><div class="ttdoc">Drawing interface.</div></div>
 <div class="ttc" id="agf__draw__driver_8h_html"><div class="ttname"><a href="gf__draw__driver_8h.html">gf_draw_driver.h</a></div><div class="ttdoc">Drawing driver.</div></div>
 <div class="ttc" id="agf__graphic_8h_html"><div class="ttname"><a href="gf__graphic_8h.html">gf_graphic.h</a></div><div class="ttdoc">Graphic interface.</div></div>
 <div class="ttc" id="agf__graphic_8h_html_a0b9f704231aa067e58c6a8e7a42afdcf"><div class="ttname"><a href="gf__graphic_8h.html#a0b9f704231aa067e58c6a8e7a42afdcf">GF_GRAPHIC_3D</a></div><div class="ttdeci">#define GF_GRAPHIC_3D</div><div class="ttdoc">Dimension parameter for 3D.</div><div class="ttdef"><b>Definition</b> <a href="gf__graphic_8h_source.html#l00044">gf_graphic.h:44</a></div></div>
 <div class="ttc" id="agf__graphic_8h_html_ab0a76f61b9510881b842dbba4b0b54c0"><div class="ttname"><a href="gf__graphic_8h.html#ab0a76f61b9510881b842dbba4b0b54c0">GF_GRAPHIC_2D</a></div><div class="ttdeci">#define GF_GRAPHIC_2D</div><div class="ttdoc">Dimension parameter for 2D.</div><div class="ttdef"><b>Definition</b> <a href="gf__graphic_8h_source.html#l00038">gf_graphic.h:38</a></div></div>
+<div class="ttc" id="agf__macro_8h_html_a64ddd31b0795e397b5d944e6f1821357"><div class="ttname"><a href="gf__macro_8h.html#a64ddd31b0795e397b5d944e6f1821357">GF_EXPORT</a></div><div class="ttdeci">#define GF_EXPORT</div><div class="ttdoc">Macro for platform-dependent symbol export/import.</div><div class="ttdef"><b>Definition</b> <a href="gf__macro_8h_source.html#l00150">gf_macro.h:150</a></div></div>
+<div class="ttc" id="agf__math_8h_html"><div class="ttname"><a href="gf__math_8h.html">gf_math.h</a></div><div class="ttdoc">Math.</div></div>
+<div class="ttc" id="agf__math_8h_html_a8bf10c0638a206ac572807e90508b6b5"><div class="ttname"><a href="gf__math_8h.html#a8bf10c0638a206ac572807e90508b6b5">GF_MATH_PI</a></div><div class="ttdeci">#define GF_MATH_PI</div><div class="ttdoc">Pi.</div><div class="ttdef"><b>Definition</b> <a href="gf__math_8h_source.html#l00024">gf_math.h:24</a></div></div>
 <div class="ttc" id="agf__opengl_8h_html"><div class="ttname"><a href="gf__opengl_8h.html">gf_opengl.h</a></div><div class="ttdoc">OpenGL headers.</div></div>
 <div class="ttc" id="agf__pre_8h_html"><div class="ttname"><a href="gf__pre_8h.html">gf_pre.h</a></div><div class="ttdoc">Required headers before anything.</div></div>
 <div class="ttc" id="agf__texture_8h_html"><div class="ttname"><a href="gf__texture_8h.html">gf_texture.h</a></div><div class="ttdoc">Texture.</div></div>
-<div class="ttc" id="astructgf__color__t_html"><div class="ttname"><a href="structgf__color__t.html">gf_color_t</a></div><div class="ttdoc">Color.</div><div class="ttdef"><b>Definition</b> <a href="graphic_8h_source.html#l00042">graphic.h:42</a></div></div>
+<div class="ttc" id="amath_8h_html_a866f43b3ea5386cb9497738f1eec3d88"><div class="ttname"><a href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a></div><div class="ttdeci">double gf_math_vector_t[4]</div><div class="ttdoc">Vector.</div><div class="ttdef"><b>Definition</b> <a href="math_8h_source.html#l00025">math.h:25</a></div></div>
 <div class="ttc" id="astructgf__draw__t_html"><div class="ttname"><a href="structgf__draw__t.html">gf_draw_t</a></div><div class="ttdoc">Drawing interface.</div><div class="ttdef"><b>Definition</b> <a href="draw_8h_source.html#l00102">draw.h:102</a></div></div>
+<div class="ttc" id="astructgf__draw__t_html_a28a0e4624401155ff09056d1994f69f2"><div class="ttname"><a href="structgf__draw__t.html#a28a0e4624401155ff09056d1994f69f2">gf_draw_t::lookat</a></div><div class="ttdeci">gf_math_vector_t lookat</div><div class="ttdoc">Where to look at.</div><div class="ttdef"><b>Definition</b> <a href="draw_8h_source.html#l00102">draw.h:102</a></div></div>
+<div class="ttc" id="astructgf__draw__t_html_ac8333a3ac4ec20cc31dffe69cf9fb19b"><div class="ttname"><a href="structgf__draw__t.html#ac8333a3ac4ec20cc31dffe69cf9fb19b">gf_draw_t::camera</a></div><div class="ttdeci">gf_math_vector_t camera</div><div class="ttdoc">Camera location.</div><div class="ttdef"><b>Definition</b> <a href="draw_8h_source.html#l00102">draw.h:102</a></div></div>
 <div class="ttc" id="astructgf__draw__t_html_adeb3586537ce39bf94c594dec0348346"><div class="ttname"><a href="structgf__draw__t.html#adeb3586537ce39bf94c594dec0348346">gf_draw_t::width</a></div><div class="ttdeci">int width</div><div class="ttdoc">Width of window.</div><div class="ttdef"><b>Definition</b> <a href="draw_8h_source.html#l00102">draw.h:102</a></div></div>
 <div class="ttc" id="astructgf__draw__t_html_ae300bda23f566c186f873c56c5d32a3f"><div class="ttname"><a href="structgf__draw__t.html#ae300bda23f566c186f873c56c5d32a3f">gf_draw_t::height</a></div><div class="ttdeci">int height</div><div class="ttdoc">Height of window.</div><div class="ttdef"><b>Definition</b> <a href="draw_8h_source.html#l00102">draw.h:102</a></div></div>
+<div class="ttc" id="astructgf__graphic__color__t_html"><div class="ttname"><a href="structgf__graphic__color__t.html">gf_graphic_color_t</a></div><div class="ttdoc">Color.</div><div class="ttdef"><b>Definition</b> <a href="graphic_8h_source.html#l00042">graphic.h:42</a></div></div>
 <div class="ttc" id="astructgf__texture__t_html"><div class="ttname"><a href="structgf__texture__t.html">gf_texture_t</a></div><div class="ttdoc">Texture.</div><div class="ttdef"><b>Definition</b> <a href="texture_8h_source.html#l00047">texture.h:47</a></div></div>
 <div class="ttc" id="astructgf__texture__t_html_a0640d6993c4de94f7e51374c12ef7e35"><div class="ttname"><a href="structgf__texture__t.html#a0640d6993c4de94f7e51374c12ef7e35">gf_texture_t::internal_width</a></div><div class="ttdeci">int internal_width</div><div class="ttdoc">Internal width of texture.</div><div class="ttdef"><b>Definition</b> <a href="texture_8h_source.html#l00047">texture.h:47</a></div></div>
 <div class="ttc" id="astructgf__texture__t_html_a3de5592e9caad1edfd93a45644a508e5"><div class="ttname"><a href="structgf__texture__t.html#a3de5592e9caad1edfd93a45644a508e5">gf_texture_t::internal_height</a></div><div class="ttdeci">int internal_height</div><div class="ttdoc">Internal height of texture.</div><div class="ttdef"><b>Definition</b> <a href="texture_8h_source.html#l00047">texture.h:47</a></div></div>
