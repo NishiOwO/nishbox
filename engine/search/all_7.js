@@ -66,7 +66,7 @@ var searchData=
   ['gf_5fexpose_5fversion_63',['GF_EXPOSE_VERSION',['../gf__macro_8h.html#a522da62928e59f2d7e01a128eb2441f2',1,'gf_macro.h']]],
   ['gf_5ffont_2eh_64',['gf_font.h',['../gf__font_8h.html',1,'']]],
   ['gf_5ffont_5fbbox_5ft_65',['gf_font_bbox_t',['../structgf__font__bbox__t.html',1,'']]],
-  ['gf_5ffont_5fcreate_66',['gf_font_create',['../gf__font_8h.html#a94852ca3bf5d4e6109a8dc5cd971a6cf',1,'gf_font.c']]],
+  ['gf_5ffont_5fcreate_66',['gf_font_create',['../gf__font_8h.html#a0d171fe12d2ac1d3acc18476436608a1',1,'gf_font.c']]],
   ['gf_5ffont_5fget_67',['gf_font_get',['../gf__font_8h.html#adc4a1d10e49218c6383f5af6c4752fa1',1,'gf_font.c']]],
   ['gf_5ffont_5fglyph_5ft_68',['gf_font_glyph_t',['../structgf__font__glyph__t.html',1,'']]],
   ['gf_5ffont_5fstore_5ft_69',['gf_font_store_t',['../structgf__font__store__t.html',1,'']]],

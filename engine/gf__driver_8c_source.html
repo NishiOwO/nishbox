@@ -139,11 +139,11 @@ $(document).ready(function(){initNavTree('gf__driver_8c_source.html',''); initRe
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        *iwidth  = w;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        *iheight = h;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        memset(d, 0, w * h);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        memset(d, 0, w * h * 4);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">for</span>(y = 0; y &lt; height; y++) {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                <span class="keywordflow">for</span>(x = 0; x &lt; width; x++) {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                        <span class="keywordtype">int</span> pos   = (y * h + x) * 4;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                        <span class="keywordtype">int</span> ogpos = (y * height + x) * 4;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                        <span class="keywordtype">int</span> pos   = (y * w + x) * 4;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                        <span class="keywordtype">int</span> ogpos = (y * width + x) * 4;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                        memcpy(d + pos + 0, data + ogpos + 0, 4);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                }</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
