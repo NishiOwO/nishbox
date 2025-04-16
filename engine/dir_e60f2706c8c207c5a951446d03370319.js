@@ -5,6 +5,7 @@ var dir_e60f2706c8c207c5a951446d03370319 =
     [ "draw.h", "draw_8h.html", "draw_8h" ],
     [ "draw_driver.h", "draw__driver_8h.html", "draw__driver_8h" ],
     [ "draw_platform.h", "draw__platform_8h.html", "draw__platform_8h" ],
+    [ "font.h", "font_8h.html", "font_8h" ],
     [ "graphic.h", "graphic_8h.html", "graphic_8h" ],
     [ "gui.h", "gui_8h.html", "gui_8h" ],
     [ "math.h", "math_8h.html", "math_8h" ],

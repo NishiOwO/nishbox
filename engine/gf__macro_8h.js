@@ -8,6 +8,7 @@ var gf__macro_8h =
     [ "GF_EXPOSE_DRAW", "gf__macro_8h.html#a438e60b3ef2df2ad0a220523e95d6dca", null ],
     [ "GF_EXPOSE_DRAW_DRIVER", "gf__macro_8h.html#a25f301eb3d5e8c3bfb8187876fa36efa", null ],
     [ "GF_EXPOSE_DRAW_PLATFORM", "gf__macro_8h.html#a5a117ced8c73165c3cc6144a49bf5af0", null ],
+    [ "GF_EXPOSE_FONT", "gf__macro_8h.html#a44fcf2830dd68160e7745e6c93a0fc15", null ],
     [ "GF_EXPOSE_GRAPHIC", "gf__macro_8h.html#a9c8f57368c8d0b9a005e88951bb6b999", null ],
     [ "GF_EXPOSE_GUI", "gf__macro_8h.html#a4a8b5bd4a3f26e4e775db703d383e315", null ],
     [ "GF_EXPOSE_MATH", "gf__macro_8h.html#a0741ff0ae6d4298a707cb24a2b88d13e", null ],

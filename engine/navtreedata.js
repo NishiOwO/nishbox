@@ -50,7 +50,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structgf__gui__component__t.html"
+"structgf__font__glyph__t.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

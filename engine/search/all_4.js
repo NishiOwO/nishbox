@@ -8,5 +8,6 @@ var searchData=
   ['draw_5fdriver_2eh_5',['draw_driver.h',['../draw__driver_8h.html',1,'']]],
   ['draw_5fdriver_5ftexture_6',['draw_driver_texture',['../structgf__texture__t.html#a6f2bc2d54ca5a6ab073a98fb4f4fbfc4',1,'gf_texture_t']]],
   ['draw_5fplatform_2eh_7',['draw_platform.h',['../draw__platform_8h.html',1,'']]],
-  ['driver_8',['driver',['../structgf__draw__t.html#a4caafef51bb4d3b4a549671f63781c5d',1,'gf_draw_t::driver'],['../structgf__version__t.html#ab555af19af1deaab5ddbe08b15f2b803',1,'gf_version_t::driver']]]
+  ['driver_8',['driver',['../structgf__draw__t.html#a4caafef51bb4d3b4a549671f63781c5d',1,'gf_draw_t::driver'],['../structgf__version__t.html#ab555af19af1deaab5ddbe08b15f2b803',1,'gf_version_t::driver']]],
+  ['dwidth_9',['dwidth',['../structgf__font__glyph__t.html#a41bd708fc4a7caadf6d9e0090fd1a880',1,'gf_font_glyph_t']]]
 ];

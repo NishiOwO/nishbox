@@ -91,6 +91,8 @@ $(document).ready(function(){initNavTree('gf__font_8h.html',''); initResizable()
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">gf_font.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -99,13 +101,110 @@ $(document).ready(function(){initNavTree('gf__font_8h.html',''); initResizable()
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="gf__pre_8h_source.html">gf_pre.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="gf__macro_8h_source.html">gf_macro.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="font_8h_source.html">gf_type/font.h</a>&gt;</code><br />
 </div>
 <p><a href="gf__font_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:adc4a1d10e49218c6383f5af6c4752fa1" id="r_adc4a1d10e49218c6383f5af6c4752fa1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgf__font__glyph__t.html">gf_font_glyph_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gf__font_8h.html#adc4a1d10e49218c6383f5af6c4752fa1">gf_font_get</a> (<a class="el" href="structgf__font__t.html">gf_font_t</a> *font, int code)</td></tr>
+<tr class="memdesc:adc4a1d10e49218c6383f5af6c4752fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get glyph.  <br /></td></tr>
+<tr class="separator:adc4a1d10e49218c6383f5af6c4752fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94852ca3bf5d4e6109a8dc5cd971a6cf" id="r_a94852ca3bf5d4e6109a8dc5cd971a6cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgf__font__t.html">gf_font_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gf__font_8h.html#a94852ca3bf5d4e6109a8dc5cd971a6cf">gf_font_create</a> (const char *path)</td></tr>
+<tr class="memdesc:a94852ca3bf5d4e6109a8dc5cd971a6cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load font.  <br /></td></tr>
+<tr class="separator:a94852ca3bf5d4e6109a8dc5cd971a6cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Font. </p>
 
 <p class="definition">Definition in file <a class="el" href="gf__font_8h_source.html">gf_font.h</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a94852ca3bf5d4e6109a8dc5cd971a6cf" name="a94852ca3bf5d4e6109a8dc5cd971a6cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94852ca3bf5d4e6109a8dc5cd971a6cf">&#9670;&#160;</a></span>gf_font_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgf__font__t.html">gf_font_t</a> * gf_font_create </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load font. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Font </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="gf__font_8c_source.html#l00035">35</a> of file <a class="el" href="gf__font_8c_source.html">gf_font.c</a>.</p>
+
+</div>
+</div>
+<a id="adc4a1d10e49218c6383f5af6c4752fa1" name="adc4a1d10e49218c6383f5af6c4752fa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc4a1d10e49218c6383f5af6c4752fa1">&#9670;&#160;</a></span>gf_font_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgf__font__glyph__t.html">gf_font_glyph_t</a> * gf_font_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgf__font__t.html">gf_font_t</a> *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>code</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get glyph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">font</td><td>Font </td></tr>
+    <tr><td class="paramname">code</td><td>Character code </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Glyph </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="gf__font_8c_source.html#l00018">18</a> of file <a class="el" href="gf__font_8c_source.html">gf_font.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

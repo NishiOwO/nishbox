@@ -5,7 +5,7 @@ var structgf__draw__t =
     [ "draw_3d", "structgf__draw__t.html#a4699dbc1203697ad79ef8635d48886ec", null ],
     [ "driver", "structgf__draw__t.html#a4caafef51bb4d3b4a549671f63781c5d", null ],
     [ "engine", "structgf__draw__t.html#a9168679ed35dff169e7694bc40d5fe83", null ],
-    [ "font", "structgf__draw__t.html#a0eb92094b7f7e35eaaff43ca9ad968bd", null ],
+    [ "font", "structgf__draw__t.html#a0d6e7e3f8f4e72bbfc4208db6b0a4e28", null ],
     [ "gui", "structgf__draw__t.html#a5db50986159b8a2b1736aa315a5d8063", null ],
     [ "height", "structgf__draw__t.html#ae300bda23f566c186f873c56c5d32a3f", null ],
     [ "light", "structgf__draw__t.html#a1cba7c3af17c134f9f749ff9cb5aba72", null ],
