@@ -8,6 +8,7 @@ var annotated_dup =
     [ "gf_engine_t", "structgf__engine__t.html", "structgf__engine__t" ],
     [ "gf_font_bbox_t", "structgf__font__bbox__t.html", "structgf__font__bbox__t" ],
     [ "gf_font_glyph_t", "structgf__font__glyph__t.html", "structgf__font__glyph__t" ],
+    [ "gf_font_store_t", "structgf__font__store__t.html", null ],
     [ "gf_font_t", "structgf__font__t.html", "structgf__font__t" ],
     [ "gf_graphic_color_t", "structgf__graphic__color__t.html", "structgf__graphic__color__t" ],
     [ "gf_gui_button_t", "structgf__gui__button__t.html", "structgf__gui__button__t" ],
