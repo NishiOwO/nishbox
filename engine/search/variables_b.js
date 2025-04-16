@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['r_0',['r',['../structgf__graphic__color__t.html#a5f1ffd7ee29657c6b6c71574b6f12788',1,'gf_graphic_color_t']]],
-  ['running_1',['running',['../structgf__draw__t.html#a687948ab2189ace286eaf627fbc7c6b3',1,'gf_draw_t']]]
+  ['patch_0',['patch',['../structgf__version__t.html#a4ae35b795688ecbcb98562b52ce03509',1,'gf_version_t']]],
+  ['platform_1',['platform',['../structgf__draw__t.html#ab7893e83d1d13fe68efbed786df0ce5c',1,'gf_draw_t']]],
+  ['points_2',['points',['../structgf__triangle__t.html#a81432658e211ca1024fd461e126a4531',1,'gf_triangle_t']]],
+  ['pressed_3',['pressed',['../structgf__gui__button__t.html#ac32e6a53a2170f64cebf5ff7df77016b',1,'gf_gui_button_t']]]
 ];

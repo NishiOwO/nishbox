@@ -120,9 +120,6 @@ Functions</h2></td></tr>
 <tr class="memitem:aa9a229aa7c06d1a02ae89f93b8029fea" id="r_aa9a229aa7c06d1a02ae89f93b8029fea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gf__core_8h.html#aa9a229aa7c06d1a02ae89f93b8029fea">gf_engine_loop</a> (<a class="el" href="structgf__engine__t.html">gf_engine_t</a> *engine)</td></tr>
 <tr class="memdesc:aa9a229aa7c06d1a02ae89f93b8029fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start engine main loop.  <br /></td></tr>
 <tr class="separator:aa9a229aa7c06d1a02ae89f93b8029fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac590750bda38d501d965b66639873ed1" id="r_ac590750bda38d501d965b66639873ed1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gf__core_8h.html#ac590750bda38d501d965b66639873ed1">gf_engine_set_draw</a> (<a class="el" href="structgf__engine__t.html">gf_engine_t</a> *engine, void(*func)(<a class="el" href="structgf__draw__t.html">gf_draw_t</a> *))</td></tr>
-<tr class="memdesc:ac590750bda38d501d965b66639873ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set user-drawing callback.  <br /></td></tr>
-<tr class="separator:ac590750bda38d501d965b66639873ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a978d9c52b1d1098b5fc2f3e869036b64" id="r_a978d9c52b1d1098b5fc2f3e869036b64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gf__core_8h.html#a978d9c52b1d1098b5fc2f3e869036b64">gf_engine_destroy</a> (<a class="el" href="structgf__engine__t.html">gf_engine_t</a> *engine)</td></tr>
 <tr class="memdesc:a978d9c52b1d1098b5fc2f3e869036b64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy engine instance.  <br /></td></tr>
 <tr class="separator:a978d9c52b1d1098b5fc2f3e869036b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,7 +239,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gf__core_8c_source.html#l00094">94</a> of file <a class="el" href="gf__core_8c_source.html">gf_core.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gf__core_8c_source.html#l00092">92</a> of file <a class="el" href="gf__core_8c_source.html">gf_core.c</a>.</p>
 
 </div>
 </div>
@@ -310,66 +307,19 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>How engine draws a frame internally is explained in <a class="el" href="gf__core_8c_source.html">gf_core.c</a></dd></dl>
 <p>Writing this so I don't forget</p>
 <ol type="1">
-<li>Calls gf_draw_step</li>
+<li>Calls gf_client_step</li>
+<li>gf_client_step calls gf_draw_step</li>
 <li>gf_draw_step calls gf_draw_platform_step (Platform-dependent)</li>
 <li>gf_draw_platform_step processes platform-dependent stuffs (e.g. events)</li>
 <li>gf_draw_platform_step calls gf_draw_driver_before</li>
 <li>gf_draw_platform_step calls gf_draw_frame</li>
-<li>gf_draw_frame calls <a class="el" href="structgf__draw__t.html#abf65ea113641d680f1c9ed00f1a88ee7" title="User-drawing callback.">gf_draw_t.draw</a> to draw frame</li>
-<li>gf_draw_frame draws more stuffs if required</li>
+<li>gf_draw_frame draws stuffs</li>
 <li>gf_draw_platform_step calls gf_draw_driver_after</li>
 <li>gf_draw_platform_step swaps buffers</li>
 <li>Comes back here </li>
 </ol>
 
-<p class="definition">Definition at line <a class="el" href="gf__core_8c_source.html#l00086">86</a> of file <a class="el" href="gf__core_8c_source.html">gf_core.c</a>.</p>
-
-</div>
-</div>
-<a id="ac590750bda38d501d965b66639873ed1" name="ac590750bda38d501d965b66639873ed1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac590750bda38d501d965b66639873ed1">&#9670;&#160;</a></span>gf_engine_set_draw()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void gf_engine_set_draw </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structgf__engine__t.html">gf_engine_t</a> *&#160;</td>
-          <td class="paramname"><em>engine</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void(*)(<a class="el" href="structgf__draw__t.html">gf_draw_t</a> *)&#160;</td>
-          <td class="paramname"><em>func</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set user-drawing callback. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">engine</td><td>Engine instance </td></tr>
-    <tr><td class="paramname">func</td><td>Callback </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="gf__core_8c_source.html#l00070">70</a> of file <a class="el" href="gf__core_8c_source.html">gf_core.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gf__core_8c_source.html#l00084">84</a> of file <a class="el" href="gf__core_8c_source.html">gf_core.c</a>.</p>
 
 </div>
 </div>

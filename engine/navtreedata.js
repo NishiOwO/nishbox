@@ -26,7 +26,6 @@ var NAVTREE =
 [
   [ "GoldFish Engine", "index.html", [
     [ "Stack", "index.html#autotoc_md1", null ],
-    [ "Todo List", "todo.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -52,7 +51,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structgf__texture__t.html#a3de5592e9caad1edfd93a45644a508e5"
+"structgf__gui__component__t.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

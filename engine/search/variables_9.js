@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['major_0',['major',['../structgf__version__t.html#a18c4ea6d16bd4d27da71586779ea3295',1,'gf_version_t']]],
-  ['mesh_1',['mesh',['../structgf__model__t.html#aa28477a09739d0ef7566532fdb62aa06',1,'gf_model_t']]],
-  ['minor_2',['minor',['../structgf__version__t.html#a573839ca44261b9ccbd73e43be57d326',1,'gf_version_t']]]
+  ['light_0',['light',['../structgf__draw__t.html#a1cba7c3af17c134f9f749ff9cb5aba72',1,'gf_draw_t']]],
+  ['log_1',['log',['../structgf__engine__t.html#a311f3b1680291fbfb3271fc73a05748c',1,'gf_engine_t']]],
+  ['lookat_2',['lookat',['../structgf__draw__t.html#a28a0e4624401155ff09056d1994f69f2',1,'gf_draw_t']]],
+  ['lua_3',['lua',['../structgf__version__t.html#af6a2e2d97455e9a11a76e34d5b4b25c1',1,'gf_version_t']]]
 ];

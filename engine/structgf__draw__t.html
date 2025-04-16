@@ -104,6 +104,9 @@ $(document).ready(function(){initNavTree('structgf__draw__t.html',''); initResiz
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
+<tr class="memitem:a9168679ed35dff169e7694bc40d5fe83" id="r_a9168679ed35dff169e7694bc40d5fe83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgf__engine__t.html">gf_engine_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgf__draw__t.html#a9168679ed35dff169e7694bc40d5fe83">engine</a></td></tr>
+<tr class="memdesc:a9168679ed35dff169e7694bc40d5fe83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Engine instance.  <br /></td></tr>
+<tr class="separator:a9168679ed35dff169e7694bc40d5fe83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7893e83d1d13fe68efbed786df0ce5c" id="r_ab7893e83d1d13fe68efbed786df0ce5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgf__draw__platform__t.html">gf_draw_platform_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgf__draw__t.html#ab7893e83d1d13fe68efbed786df0ce5c">platform</a></td></tr>
 <tr class="memdesc:ab7893e83d1d13fe68efbed786df0ce5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Platform-dependent part of drawing driver.  <br /></td></tr>
 <tr class="separator:ab7893e83d1d13fe68efbed786df0ce5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,14 +152,11 @@ Data Fields</h2></td></tr>
 <tr class="memitem:ac8333a3ac4ec20cc31dffe69cf9fb19b" id="r_ac8333a3ac4ec20cc31dffe69cf9fb19b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_8h.html#a866f43b3ea5386cb9497738f1eec3d88">gf_math_vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgf__draw__t.html#ac8333a3ac4ec20cc31dffe69cf9fb19b">camera</a></td></tr>
 <tr class="memdesc:ac8333a3ac4ec20cc31dffe69cf9fb19b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera location.  <br /></td></tr>
 <tr class="separator:ac8333a3ac4ec20cc31dffe69cf9fb19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf65ea113641d680f1c9ed00f1a88ee7" id="r_abf65ea113641d680f1c9ed00f1a88ee7"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgf__draw__t.html#abf65ea113641d680f1c9ed00f1a88ee7">draw</a> )(<a class="el" href="structgf__draw__t.html">gf_draw_t</a> *)</td></tr>
-<tr class="memdesc:abf65ea113641d680f1c9ed00f1a88ee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">User-drawing callback.  <br /></td></tr>
-<tr class="separator:abf65ea113641d680f1c9ed00f1a88ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Drawing interface. </p>
 
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="ac8333a3ac4ec20cc31dffe69cf9fb19b" name="ac8333a3ac4ec20cc31dffe69cf9fb19b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac8333a3ac4ec20cc31dffe69cf9fb19b">&#9670;&#160;</a></span>camera</h2>
@@ -172,7 +172,7 @@ Data Fields</h2></td></tr>
 
 <p>Camera location. </p>
 
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
 
 </div>
 </div>
@@ -190,25 +190,7 @@ Data Fields</h2></td></tr>
 
 <p><code>1</code> if it was requested to be closed, otherwise <code>0</code> </p>
 
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
-
-</div>
-</div>
-<a id="abf65ea113641d680f1c9ed00f1a88ee7" name="abf65ea113641d680f1c9ed00f1a88ee7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf65ea113641d680f1c9ed00f1a88ee7">&#9670;&#160;</a></span>draw</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">gf_draw_t::draw</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>User-drawing callback. </p>
-
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
 
 </div>
 </div>
@@ -226,7 +208,7 @@ Data Fields</h2></td></tr>
 
 <p><code>1</code> if engine should start rendering 3D stuffs, otherwise <code>0</code> </p>
 
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
 
 </div>
 </div>
@@ -244,7 +226,25 @@ Data Fields</h2></td></tr>
 
 <p>Drawing driver. </p>
 
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+
+</div>
+</div>
+<a id="a9168679ed35dff169e7694bc40d5fe83" name="a9168679ed35dff169e7694bc40d5fe83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9168679ed35dff169e7694bc40d5fe83">&#9670;&#160;</a></span>engine</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gf_draw_t::engine</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Engine instance. </p>
+
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
 
 </div>
 </div>
@@ -262,7 +262,7 @@ Data Fields</h2></td></tr>
 
 <p>Array of texture of glyphs. </p>
 
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
 
 </div>
 </div>
@@ -280,7 +280,7 @@ Data Fields</h2></td></tr>
 
 <p>GUI. </p>
 
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
 
 </div>
 </div>
@@ -298,7 +298,7 @@ Data Fields</h2></td></tr>
 
 <p>Height of window. </p>
 
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
 
 </div>
 </div>
@@ -317,7 +317,7 @@ Data Fields</h2></td></tr>
 <p>Light location. </p>
 <dl class="section note"><dt>Note</dt><dd><a class="el" href="structgf__draw__t.html#a1cba7c3af17c134f9f749ff9cb5aba72" title="Light location.">gf_draw_t::light</a>[3] should be 1 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
 
 </div>
 </div>
@@ -335,7 +335,7 @@ Data Fields</h2></td></tr>
 
 <p>Where to look at. </p>
 
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
 
 </div>
 </div>
@@ -353,7 +353,7 @@ Data Fields</h2></td></tr>
 
 <p>Platform-dependent part of drawing driver. </p>
 
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
 
 </div>
 </div>
@@ -371,7 +371,7 @@ Data Fields</h2></td></tr>
 
 <p><code>1</code> if running, otherwise <code>0</code> </p>
 
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
 
 </div>
 </div>
@@ -389,7 +389,7 @@ Data Fields</h2></td></tr>
 
 <p>Window title. </p>
 
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
 
 </div>
 </div>
@@ -407,7 +407,7 @@ Data Fields</h2></td></tr>
 
 <p>Width of window. </p>
 
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
 
 </div>
 </div>
@@ -425,7 +425,7 @@ Data Fields</h2></td></tr>
 
 <p>X coord of window. </p>
 
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
 
 </div>
 </div>
@@ -443,7 +443,7 @@ Data Fields</h2></td></tr>
 
 <p>Y coord of window. </p>
 
-<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00102">102</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw_8h_source.html#l00100">100</a> of file <a class="el" href="draw_8h_source.html">draw.h</a>.</p>
 
 </div>
 </div>

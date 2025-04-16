@@ -2,7 +2,7 @@ var searchData=
 [
   ['data_0',['data',['../structgf__thread__context__t.html#a5ffa4a8254033678e59129ff895271ba',1,'gf_thread_context_t']]],
   ['date_1',['date',['../structgf__version__t.html#ac38d0e162b52e8d20fc27ecbf4148375',1,'gf_version_t']]],
-  ['draw_2',['draw',['../structgf__engine__t.html#afe266a6ff39f87d8a940d07bcfd08de5',1,'gf_engine_t::draw'],['../structgf__draw__t.html#abf65ea113641d680f1c9ed00f1a88ee7',1,'gf_draw_t::draw'],['../structgf__gui__t.html#a83995bd363ebcdac5b80a16681ea111a',1,'gf_gui_t::draw']]],
+  ['draw_2',['draw',['../structgf__gui__t.html#a83995bd363ebcdac5b80a16681ea111a',1,'gf_gui_t']]],
   ['draw_2eh_3',['draw.h',['../draw_8h.html',1,'']]],
   ['draw_5f3d_4',['draw_3d',['../structgf__draw__t.html#a4699dbc1203697ad79ef8635d48886ec',1,'gf_draw_t']]],
   ['draw_5fdriver_2eh_5',['draw_driver.h',['../draw__driver_8h.html',1,'']]],

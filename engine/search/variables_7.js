@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['id_0',['id',['../structgf__physics__t.html#ae58352acdf2e4f9b7f5593a33d7cf5e1',1,'gf_physics_t']]],
-  ['internal_5fheight_1',['internal_height',['../structgf__texture__t.html#a3de5592e9caad1edfd93a45644a508e5',1,'gf_texture_t']]],
-  ['internal_5fwidth_2',['internal_width',['../structgf__texture__t.html#a0640d6993c4de94f7e51374c12ef7e35',1,'gf_texture_t']]]
+  ['height_0',['height',['../structgf__draw__t.html#ae300bda23f566c186f873c56c5d32a3f',1,'gf_draw_t::height'],['../structgf__gui__component__t.html#a76656c3956b8b6055eaec792d82ceddb',1,'gf_gui_component_t::height'],['../structgf__texture__t.html#a7746f1b9059b336d89155945fc48c027',1,'gf_texture_t::height']]]
 ];

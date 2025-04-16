@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "gf_client_t", "structgf__client__t.html", null ],
     [ "gf_draw_driver_t", "structgf__draw__driver__t.html", null ],
     [ "gf_draw_driver_texture_t", "structgf__draw__driver__texture__t.html", null ],
     [ "gf_draw_platform_t", "structgf__draw__platform__t.html", null ],
@@ -13,6 +14,7 @@ var annotated_dup =
     [ "gf_mesh_t", "structgf__mesh__t.html", "structgf__mesh__t" ],
     [ "gf_model_t", "structgf__model__t.html", "structgf__model__t" ],
     [ "gf_physics_t", "structgf__physics__t.html", "structgf__physics__t" ],
+    [ "gf_server_t", "structgf__server__t.html", null ],
     [ "gf_texture_t", "structgf__texture__t.html", "structgf__texture__t" ],
     [ "gf_thread_context_t", "structgf__thread__context__t.html", "structgf__thread__context__t" ],
     [ "gf_thread_t", "structgf__thread__t.html", null ],

@@ -2,9 +2,9 @@ var structgf__draw__t =
 [
     [ "camera", "structgf__draw__t.html#ac8333a3ac4ec20cc31dffe69cf9fb19b", null ],
     [ "close", "structgf__draw__t.html#a923e76b7eba5d6bca1c92bea6a716adb", null ],
-    [ "draw", "structgf__draw__t.html#abf65ea113641d680f1c9ed00f1a88ee7", null ],
     [ "draw_3d", "structgf__draw__t.html#a4699dbc1203697ad79ef8635d48886ec", null ],
     [ "driver", "structgf__draw__t.html#a4caafef51bb4d3b4a549671f63781c5d", null ],
+    [ "engine", "structgf__draw__t.html#a9168679ed35dff169e7694bc40d5fe83", null ],
     [ "font", "structgf__draw__t.html#a0eb92094b7f7e35eaaff43ca9ad968bd", null ],
     [ "gui", "structgf__draw__t.html#a5db50986159b8a2b1736aa315a5d8063", null ],
     [ "height", "structgf__draw__t.html#ae300bda23f566c186f873c56c5d32a3f", null ],

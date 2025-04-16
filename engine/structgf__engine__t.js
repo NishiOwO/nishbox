@@ -1,6 +1,6 @@
 var structgf__engine__t =
 [
-    [ "draw", "structgf__engine__t.html#afe266a6ff39f87d8a940d07bcfd08de5", null ],
+    [ "client", "structgf__engine__t.html#a4f2720244393f64efe90ef5079338ac2", null ],
     [ "log", "structgf__engine__t.html#a311f3b1680291fbfb3271fc73a05748c", null ],
-    [ "physics", "structgf__engine__t.html#a7c2ef3e7e28c9fd63d54d37b41c25aa7", null ]
+    [ "server", "structgf__engine__t.html#a2ddb35da78854ca79e6f3be1cd5b8390", null ]
 ];

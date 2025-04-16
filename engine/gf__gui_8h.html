@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('gf__gui_8h.html',''); initResizable();
 <code>#include &lt;<a class="el" href="gf__macro_8h_source.html">gf_macro.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="gui_8h_source.html">gf_type/gui.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="draw_8h_source.html">gf_type/draw.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="core_8h_source.html">gf_type/core.h</a>&gt;</code><br />
 </div>
 <p><a href="gf__gui_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -121,9 +122,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2aac0730173ef06e446ff841f689229f" id="r_a2aac0730173ef06e446ff841f689229f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgf__gui__t.html">gf_gui_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gf__gui_8h.html#a2aac0730173ef06e446ff841f689229f">gf_gui_create</a> (<a class="el" href="structgf__draw__t.html">gf_draw_t</a> *draw)</td></tr>
-<tr class="memdesc:a2aac0730173ef06e446ff841f689229f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create GUI.  <br /></td></tr>
-<tr class="separator:a2aac0730173ef06e446ff841f689229f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a929e99bf9dd58e4abc0c9f2a6b1341a1" id="r_a929e99bf9dd58e4abc0c9f2a6b1341a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgf__gui__t.html">gf_gui_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gf__gui_8h.html#a929e99bf9dd58e4abc0c9f2a6b1341a1">gf_gui_create</a> (<a class="el" href="structgf__engine__t.html">gf_engine_t</a> *engine, <a class="el" href="structgf__draw__t.html">gf_draw_t</a> *draw)</td></tr>
+<tr class="memdesc:a929e99bf9dd58e4abc0c9f2a6b1341a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create GUI.  <br /></td></tr>
+<tr class="separator:a929e99bf9dd58e4abc0c9f2a6b1341a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a047717f304c931fc157e0131fcad442d" id="r_a047717f304c931fc157e0131fcad442d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gui_8h.html#a17ba559c53b849a8391b8f48d91b4f11">gf_gui_id_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gf__gui_8h.html#a047717f304c931fc157e0131fcad442d">gf_gui_create_button</a> (<a class="el" href="structgf__gui__t.html">gf_gui_t</a> *gui, float x, float y, float w, float h, const char *text)</td></tr>
 <tr class="memdesc:a047717f304c931fc157e0131fcad442d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create button component.  <br /></td></tr>
 <tr class="separator:a047717f304c931fc157e0131fcad442d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,7 +157,7 @@ Functions</h2></td></tr>
 
 <p>Default GUI font size. </p>
 
-<p class="definition">Definition at line <a class="el" href="gf__gui_8h_source.html#l00037">37</a> of file <a class="el" href="gf__gui_8h_source.html">gf_gui.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gf__gui_8h_source.html#l00038">38</a> of file <a class="el" href="gf__gui_8h_source.html">gf_gui.h</a>.</p>
 
 </div>
 </div>
@@ -174,7 +175,7 @@ Functions</h2></td></tr>
 
 <p>Draw border inverted. </p>
 
-<p class="definition">Definition at line <a class="el" href="gf__gui_8h_source.html#l00031">31</a> of file <a class="el" href="gf__gui_8h_source.html">gf_gui.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gf__gui_8h_source.html#l00032">32</a> of file <a class="el" href="gf__gui_8h_source.html">gf_gui.h</a>.</p>
 
 </div>
 </div>
@@ -192,13 +193,13 @@ Functions</h2></td></tr>
 
 <p>Draw border normally. </p>
 
-<p class="definition">Definition at line <a class="el" href="gf__gui_8h_source.html#l00025">25</a> of file <a class="el" href="gf__gui_8h_source.html">gf_gui.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gf__gui_8h_source.html#l00026">26</a> of file <a class="el" href="gf__gui_8h_source.html">gf_gui.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a2aac0730173ef06e446ff841f689229f" name="a2aac0730173ef06e446ff841f689229f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2aac0730173ef06e446ff841f689229f">&#9670;&#160;</a></span>gf_gui_create()</h2>
+<a id="a929e99bf9dd58e4abc0c9f2a6b1341a1" name="a929e99bf9dd58e4abc0c9f2a6b1341a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a929e99bf9dd58e4abc0c9f2a6b1341a1">&#9670;&#160;</a></span>gf_gui_create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,9 +210,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="structgf__gui__t.html">gf_gui_t</a> * gf_gui_create </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structgf__draw__t.html">gf_draw_t</a> *&#160;</td>
-          <td class="paramname"><em>draw</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structgf__engine__t.html">gf_engine_t</a> *&#160;</td>
+          <td class="paramname"><em>engine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="structgf__draw__t.html">gf_draw_t</a> *&#160;</td>
+          <td class="paramname"><em>draw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -224,6 +235,7 @@ Functions</h2></td></tr>
 <p>Create GUI. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">engine</td><td>Engine instance </td></tr>
     <tr><td class="paramname">draw</td><td>Drawing interface </td></tr>
   </table>
   </dd>
@@ -307,7 +319,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Component ID </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="gf__gui_8c_source.html#l00070">70</a> of file <a class="el" href="gf__gui_8c_source.html">gf_gui.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gf__gui_8c_source.html#l00072">72</a> of file <a class="el" href="gf__gui_8c_source.html">gf_gui.c</a>.</p>
 
 </div>
 </div>
@@ -382,7 +394,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gf__gui_8c_source.html#l00036">36</a> of file <a class="el" href="gf__gui_8c_source.html">gf_gui.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gf__gui_8c_source.html#l00038">38</a> of file <a class="el" href="gf__gui_8c_source.html">gf_gui.c</a>.</p>
 
 </div>
 </div>
@@ -422,7 +434,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to component </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="gf__gui_8c_source.html#l00059">59</a> of file <a class="el" href="gf__gui_8c_source.html">gf_gui.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gf__gui_8c_source.html#l00061">61</a> of file <a class="el" href="gf__gui_8c_source.html">gf_gui.c</a>.</p>
 
 </div>
 </div>
@@ -458,7 +470,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gf__gui_8c_source.html#l00086">86</a> of file <a class="el" href="gf__gui_8c_source.html">gf_gui.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gf__gui_8c_source.html#l00088">88</a> of file <a class="el" href="gf__gui_8c_source.html">gf_gui.c</a>.</p>
 
 </div>
 </div>
