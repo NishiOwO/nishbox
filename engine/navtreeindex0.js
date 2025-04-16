@@ -218,6 +218,8 @@ var NAVTREEINDEX0 =
 "server_8h.html":[2,0,1,0,11],
 "server_8h_source.html":[2,0,1,0,11],
 "structgf__client__t.html":[1,0,0],
+"structgf__client__t.html#a363cb3993e177565b9e22c9df5d5ce2c":[1,0,0,0],
+"structgf__client__t.html#af44ab851509a6119df42954b209b7c0d":[1,0,0,1],
 "structgf__draw__driver__t.html":[1,0,1],
 "structgf__draw__driver__texture__t.html":[1,0,2],
 "structgf__draw__platform__t.html":[1,0,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "structgf__graphic__color__t.html#a26d66ab963cf6822e7eadb7b0a96e040":[1,0,6,1],
 "structgf__graphic__color__t.html#a55cf386eda83f15c1aa811626653141c":[1,0,6,0],
 "structgf__graphic__color__t.html#a5f1ffd7ee29657c6b6c71574b6f12788":[1,0,6,3],
-"structgf__gui__button__t.html":[1,0,7],
-"structgf__gui__button__t.html#ac32e6a53a2170f64cebf5ff7df77016b":[1,0,7,0],
-"structgf__gui__button__t.html#af4244759e08c083e52da752f3e83980c":[1,0,7,1]
+"structgf__gui__button__t.html":[1,0,7]
 };
