@@ -75,7 +75,6 @@ var NAVTREEINDEX0 =
 "gf__driver_8c_source.html":[2,0,0,0,3],
 "gf__font_8c_source.html":[2,0,6],
 "gf__font_8h.html":[2,0,1,6],
-"gf__font_8h.html#a5afc4a8b4ee061e38a6c7a1843f8fee2":[2,0,1,6,0],
 "gf__font_8h_source.html":[2,0,1,6],
 "gf__graphic_8c_source.html":[2,0,0,0,4],
 "gf__graphic_8h.html":[2,0,1,7],
@@ -187,11 +186,10 @@ var NAVTREEINDEX0 =
 "gf__version_8h_source.html":[2,0,1,20],
 "glfw_2gf__draw_8c_source.html":[2,0,0,0,0,0],
 "globals.html":[2,1,0],
-"globals_defs.html":[2,1,5],
-"globals_enum.html":[2,1,4],
+"globals_defs.html":[2,1,4],
+"globals_enum.html":[2,1,3],
 "globals_func.html":[2,1,1],
-"globals_type.html":[2,1,3],
-"globals_vars.html":[2,1,2],
+"globals_type.html":[2,1,2],
 "glx_2gf__draw_8c_source.html":[2,0,0,0,1,0],
 "graphic_8h.html":[2,0,1,0,5],
 "graphic_8h_source.html":[2,0,1,0,5],
@@ -249,5 +247,7 @@ var NAVTREEINDEX0 =
 "structgf__graphic__color__t.html#a26d66ab963cf6822e7eadb7b0a96e040":[1,0,6,1],
 "structgf__graphic__color__t.html#a55cf386eda83f15c1aa811626653141c":[1,0,6,0],
 "structgf__graphic__color__t.html#a5f1ffd7ee29657c6b6c71574b6f12788":[1,0,6,3],
-"structgf__gui__button__t.html":[1,0,7]
+"structgf__gui__button__t.html":[1,0,7],
+"structgf__gui__button__t.html#ac32e6a53a2170f64cebf5ff7df77016b":[1,0,7,0],
+"structgf__gui__button__t.html#af4244759e08c083e52da752f3e83980c":[1,0,7,1]
 };

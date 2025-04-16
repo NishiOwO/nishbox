@@ -1,7 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"structgf__gui__button__t.html#ac32e6a53a2170f64cebf5ff7df77016b":[1,0,7,0],
-"structgf__gui__button__t.html#af4244759e08c083e52da752f3e83980c":[1,0,7,1],
 "structgf__gui__component__t.html":[1,0,8],
 "structgf__gui__component__t.html#a6029cc56d9b7feab844576661a55a865":[1,0,8,5],
 "structgf__gui__component__t.html#a6083ffb3cc61006522da912641bc4b1d":[1,0,8,3],
