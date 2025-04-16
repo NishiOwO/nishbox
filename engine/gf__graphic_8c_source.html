@@ -191,7 +191,7 @@ $(document).ready(function(){initNavTree('gf__graphic_8c_source.html',''); initR
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        va_list va;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        va_start(va, npair);</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        gf_graphic_begin_2d(draw);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">if</span>(dim == 2) gf_graphic_begin_2d(draw);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        gf_draw_driver_set_color(draw, color);</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        glBegin(GL_TRIANGLE_FAN);</div>
@@ -208,7 +208,7 @@ $(document).ready(function(){initNavTree('gf__graphic_8c_source.html',''); initR
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        }</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        glEnd();</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        gf_graphic_end_2d(draw);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">if</span>(dim == 2) gf_graphic_end_2d(draw);</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        va_end(va);</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>

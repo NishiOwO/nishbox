@@ -127,12 +127,13 @@ var NAVTREEINDEX0 =
 "gf__math_8h.html":[3,0,1,10],
 "gf__math_8h.html#a018423cb05adf480f9c3f28f304d1c47":[3,0,1,10,3],
 "gf__math_8h.html#a394ebd35e2cddf28c86a45dad759fbee":[3,0,1,10,4],
-"gf__math_8h.html#a3bd2afc9ff0e67e60afef9fe82553726":[3,0,1,10,6],
-"gf__math_8h.html#a5438b2f7f1324cdd664f2b823faa1ba6":[3,0,1,10,5],
+"gf__math_8h.html#a3bd2afc9ff0e67e60afef9fe82553726":[3,0,1,10,7],
+"gf__math_8h.html#a5438b2f7f1324cdd664f2b823faa1ba6":[3,0,1,10,6],
 "gf__math_8h.html#a545245d1e846e9c756e776eb6138536b":[3,0,1,10,1],
 "gf__math_8h.html#a8bf10c0638a206ac572807e90508b6b5":[3,0,1,10,0],
-"gf__math_8h.html#a9df6d1b30bea0b200582e2873bddd113":[3,0,1,10,7],
+"gf__math_8h.html#a9df6d1b30bea0b200582e2873bddd113":[3,0,1,10,8],
 "gf__math_8h.html#aac8f6a22f2880f5b86b20a191a662333":[3,0,1,10,2],
+"gf__math_8h.html#aefea2441e869786726095fcda71750dc":[3,0,1,10,5],
 "gf__math_8h_source.html":[3,0,1,10],
 "gf__mesh_8c_source.html":[3,0,10],
 "gf__mesh_8h.html":[3,0,1,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "structgf__physics__t.html":[2,0,12],
 "structgf__physics__t.html#ae58352acdf2e4f9b7f5593a33d7cf5e1":[2,0,12,0],
 "structgf__texture__t.html":[2,0,13],
-"structgf__texture__t.html#a0640d6993c4de94f7e51374c12ef7e35":[2,0,13,3],
-"structgf__texture__t.html#a3de5592e9caad1edfd93a45644a508e5":[2,0,13,2]
+"structgf__texture__t.html#a0640d6993c4de94f7e51374c12ef7e35":[2,0,13,3]
 };

@@ -181,50 +181,49 @@ $(document).ready(function(){initNavTree('gf__draw__common_8c_source.html',''); 
 <div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="gf__draw_8h.html#a4887fe11d8dfe55cf784e07b382b046a">   78</a></span><span class="keywordtype">void</span> gf_draw_frame(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw) {</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_struct" href="structgf__graphic__color__t.html">gf_graphic_color_t</a> color;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordtype">float</span>              z = 16;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        color.<a class="code hl_variable" href="structgf__graphic__color__t.html#a5f1ffd7ee29657c6b6c71574b6f12788">r</a> = color.<a class="code hl_variable" href="structgf__graphic__color__t.html#a0f0a24017b41658518516306c7e19acf">g</a> = color.<a class="code hl_variable" href="structgf__graphic__color__t.html#a26d66ab963cf6822e7eadb7b0a96e040">b</a> = color.<a class="code hl_variable" href="structgf__graphic__color__t.html#a55cf386eda83f15c1aa811626653141c">a</a> = 255;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">if</span>(draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#a4699dbc1203697ad79ef8635d48886ec">draw_3d</a>) {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        gf_graphic_draw_texture_polygon(draw, test_texture, color, <a class="code hl_define" href="gf__graphic_8h.html#a0b9f704231aa067e58c6a8e7a42afdcf">GF_GRAPHIC_3D</a>, 4,</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                                        <span class="comment">/* clang-format off */</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                0.0, 0.0,</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                -1.0, 0.0, -1.0,</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                0.0, 1.0 * z,</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                -1.0, 0.0, 1.0,</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                1.0 * z, 1.0 * z,</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                1.0, 0.0, 1.0,</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                1.0 * z, 0.0,</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                1.0, 0.0, -1.0</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                                        <span class="comment">/* clang-format on */</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        );</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">if</span>(draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#abf65ea113641d680f1c9ed00f1a88ee7">draw</a> != NULL) draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#abf65ea113641d680f1c9ed00f1a88ee7">draw</a>(draw);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        color.<a class="code hl_variable" href="structgf__graphic__color__t.html#a5f1ffd7ee29657c6b6c71574b6f12788">r</a> = color.<a class="code hl_variable" href="structgf__graphic__color__t.html#a0f0a24017b41658518516306c7e19acf">g</a> = color.<a class="code hl_variable" href="structgf__graphic__color__t.html#a26d66ab963cf6822e7eadb7b0a96e040">b</a> = color.<a class="code hl_variable" href="structgf__graphic__color__t.html#a55cf386eda83f15c1aa811626653141c">a</a> = 255;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">if</span>(draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#a4699dbc1203697ad79ef8635d48886ec">draw_3d</a>) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        gf_graphic_draw_texture_polygon(draw, test_texture, color, <a class="code hl_define" href="gf__graphic_8h.html#a0b9f704231aa067e58c6a8e7a42afdcf">GF_GRAPHIC_3D</a>, 4,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                                        <span class="comment">/* clang-format off */</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                0.0, 0.0,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                -1.0, 0.0, -1.0,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                0.0, 8.0,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                -1.0, 0.0, 1.0,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                8.0, 8.0,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                1.0, 0.0, 1.0,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                8.0, 0.0,</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                1.0, 0.0, -1.0</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                                        <span class="comment">/* clang-format on */</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        );</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">if</span>(draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#abf65ea113641d680f1c9ed00f1a88ee7">draw</a> != NULL) draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#abf65ea113641d680f1c9ed00f1a88ee7">draw</a>(draw);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
 </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="gf__draw_8h.html#ab42233fe50e74c1e72d902db34d0cc46">  102</a></span><span class="keywordtype">void</span> gf_draw_set_draw(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw, <span class="keywordtype">void</span> (*func)(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>*)) { draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#abf65ea113641d680f1c9ed00f1a88ee7">draw</a> = func; }</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="gf__draw_8h.html#a47934a1eafd8426cc145a97e36867551">  104</a></span><span class="keywordtype">int</span> gf_draw_step(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw) {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordtype">int</span> ret = gf_draw_platform_step(draw);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordflow">if</span>(ret != 0) <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#a923e76b7eba5d6bca1c92bea6a716adb">close</a> = 0;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>}</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="gf__draw_8h.html#ab42233fe50e74c1e72d902db34d0cc46">  101</a></span><span class="keywordtype">void</span> gf_draw_set_draw(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw, <span class="keywordtype">void</span> (*func)(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>*)) { draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#abf65ea113641d680f1c9ed00f1a88ee7">draw</a> = func; }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="}">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="gf__draw_8h.html#a47934a1eafd8426cc145a97e36867551">  103</a></span><span class="keywordtype">int</span> gf_draw_step(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw) {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordtype">int</span> ret = gf_draw_platform_step(draw);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordflow">if</span>(ret != 0) <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#a923e76b7eba5d6bca1c92bea6a716adb">close</a> = 0;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
 </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="foldopen" id="foldopen00112" data-start="{" data-end="}">
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="gf__draw_8h.html#aa7c19917300ff10b22de455323f01d83">  112</a></span><span class="keywordtype">void</span> gf_draw_destroy(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw) {</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordtype">int</span> i;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">if</span>(draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#a687948ab2189ace286eaf627fbc7c6b3">running</a>) {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                gf_draw_driver_destroy(draw);</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        }</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        gf_draw_platform_destroy(draw);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <a class="code hl_define" href="gf__log_8h.html#a165a2d1cecbdd974b4a44450011bb84a">gf_log_function</a>(NULL, <span class="stringliteral">&quot;Destroyed drawing interface&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="gf__draw_8h.html#aa7c19917300ff10b22de455323f01d83">  111</a></span><span class="keywordtype">void</span> gf_draw_destroy(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordtype">int</span> i;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">if</span>(draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#a687948ab2189ace286eaf627fbc7c6b3">running</a>) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                gf_draw_driver_destroy(draw);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        gf_draw_platform_destroy(draw);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <a class="code hl_define" href="gf__log_8h.html#a165a2d1cecbdd974b4a44450011bb84a">gf_log_function</a>(NULL, <span class="stringliteral">&quot;Destroyed drawing interface&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>}</div>
 </div>
 <div class="ttc" id="agf__core_8h_html"><div class="ttname"><a href="gf__core_8h.html">gf_core.h</a></div><div class="ttdoc">Core.</div></div>
 <div class="ttc" id="agf__draw_8h_html"><div class="ttname"><a href="gf__draw_8h.html">gf_draw.h</a></div><div class="ttdoc">Drawing interface.</div></div>

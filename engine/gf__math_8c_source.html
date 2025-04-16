@@ -169,6 +169,17 @@ $(document).ready(function(){initNavTree('gf__math_8c_source.html',''); initResi
 </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="gf__math_8h.html#aac8f6a22f2880f5b86b20a191a662333">   62</a></span><span class="keywordtype">double</span> gf_math_cot(<span class="keywordtype">double</span> x) { <span class="keywordflow">return</span> (<span class="keywordtype">double</span>)1 / tan(x); }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="gf__math_8h.html#aefea2441e869786726095fcda71750dc">   64</a></span><span class="keywordtype">double</span> gf_math_nearest_2pow(<span class="keywordtype">double</span> x) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">double</span> l = gf_math_log2(x);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordtype">double</span> r = pow(2, (<span class="keywordtype">int</span>)l);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">if</span>(x == r) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="keywordflow">return</span> r;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">return</span> pow(2, 1 + (<span class="keywordtype">int</span>)l);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}</div>
+</div>
 <div class="ttc" id="agf__math_8h_html"><div class="ttname"><a href="gf__math_8h.html">gf_math.h</a></div><div class="ttdoc">Math.</div></div>
 <div class="ttc" id="agf__pre_8h_html"><div class="ttname"><a href="gf__pre_8h.html">gf_pre.h</a></div><div class="ttdoc">Required headers before anything.</div></div>
 <div class="ttc" id="amath_8h_html"><div class="ttname"><a href="math_8h.html">math.h</a></div><div class="ttdoc">Type definitions related to math.</div></div>
