@@ -9,6 +9,7 @@ var files_dup =
     [ "gf_font.c", "gf__font_8c_source.html", null ],
     [ "gf_graphic_common.c", "gf__graphic__common_8c_source.html", null ],
     [ "gf_gui.c", "gf__gui_8c_source.html", null ],
+    [ "gf_input.c", "gf__input_8c_source.html", null ],
     [ "gf_log.c", "gf__log_8c_source.html", null ],
     [ "gf_math.c", "gf__math_8c_source.html", null ],
     [ "gf_mesh.c", "gf__mesh_8c_source.html", null ],

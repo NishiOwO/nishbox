@@ -1,5 +1,8 @@
 var NAVTREEINDEX1 =
 {
+"structgf__font__bbox__t.html#a2b45d905b5ba888912df8e50037b4727":[1,0,6,1],
+"structgf__font__bbox__t.html#a74aeb849bbd50cbe19cd3f992a583fd9":[1,0,6,2],
+"structgf__font__bbox__t.html#aadca894f3608eb26ffdf5a84bfb7dbd3":[1,0,6,0],
 "structgf__font__glyph__t.html":[1,0,7],
 "structgf__font__glyph__t.html#a2eb5224830d39157b39b55d8d13819c4":[1,0,7,2],
 "structgf__font__glyph__t.html#a41bd708fc4a7caadf6d9e0090fd1a880":[1,0,7,3],
