@@ -163,15 +163,15 @@ $(document).ready(function(){initNavTree('gf__graphic_8c_source.html',''); initR
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        glBegin(GL_TRIANGLE_FAN);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">for</span>(i = 0; i &lt; npair; i++) {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                <span class="keywordtype">float</span> tx = va_arg(va, <span class="keywordtype">double</span>) * tw;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="keywordtype">float</span> ty = va_arg(va, <span class="keywordtype">double</span>) * th;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordtype">float</span> x  = va_arg(va, <span class="keywordtype">double</span>);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="keywordtype">float</span> y  = va_arg(va, <span class="keywordtype">double</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                <span class="keywordtype">double</span> tx = va_arg(va, <span class="keywordtype">double</span>) * tw;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="keywordtype">double</span> ty = va_arg(va, <span class="keywordtype">double</span>) * th;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordtype">double</span> x  = va_arg(va, <span class="keywordtype">double</span>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="keywordtype">double</span> y  = va_arg(va, <span class="keywordtype">double</span>);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                glTexCoord2f(tx, ty);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="keywordflow">if</span>(dim == <a class="code hl_define" href="gf__graphic_8h.html#ab0a76f61b9510881b842dbba4b0b54c0">GF_GRAPHIC_2D</a>) {</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                        glVertex2f(x, y);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(dim == <a class="code hl_define" href="gf__graphic_8h.html#a0b9f704231aa067e58c6a8e7a42afdcf">GF_GRAPHIC_3D</a>) {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                        <span class="keywordtype">float</span> z = va_arg(va, <span class="keywordtype">double</span>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                        <span class="keywordtype">double</span> z = va_arg(va, <span class="keywordtype">double</span>);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                        glVertex3f(x, y, z);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                }</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
@@ -197,12 +197,12 @@ $(document).ready(function(){initNavTree('gf__graphic_8c_source.html',''); initR
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        glBegin(GL_TRIANGLE_FAN);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">for</span>(i = 0; i &lt; npair; i++) {</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <span class="keywordtype">float</span> x = va_arg(va, <span class="keywordtype">double</span>);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                <span class="keywordtype">float</span> y = va_arg(va, <span class="keywordtype">double</span>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <span class="keywordtype">double</span> x = va_arg(va, <span class="keywordtype">double</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                <span class="keywordtype">double</span> y = va_arg(va, <span class="keywordtype">double</span>);</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                <span class="keywordflow">if</span>(dim == <a class="code hl_define" href="gf__graphic_8h.html#ab0a76f61b9510881b842dbba4b0b54c0">GF_GRAPHIC_2D</a>) {</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                        glVertex2f(x, y);</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(dim == <a class="code hl_define" href="gf__graphic_8h.html#a0b9f704231aa067e58c6a8e7a42afdcf">GF_GRAPHIC_3D</a>) {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                        <span class="keywordtype">float</span> z = va_arg(va, <span class="keywordtype">double</span>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                        <span class="keywordtype">double</span> z = va_arg(va, <span class="keywordtype">double</span>);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                        glVertex3f(x, y, z);</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                }</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        }</div>
