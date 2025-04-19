@@ -70,7 +70,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('glfw_2gf__draw_8c_source.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('opengl_2glfw_2gf__draw_8c_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -119,17 +119,15 @@ $(document).ready(function(){initNavTree('glfw_2gf__draw_8c_source.html',''); in
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="gf__draw__platform_8h.html#aa3106f20d1a654acf65f5e4ddb7a0fdd">   21</a></span><span class="keywordtype">void</span> gf_draw_platform_begin(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> gf_draw_platform_begin(<span class="keywordtype">void</span>) {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        glfwInit();</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 1);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        glfwWindowHint(GLFW_DOUBLEBUFFER, GLFW_TRUE);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_ANY_PROFILE);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
-</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="gf__draw__platform_8h.html#ad6f83af1b5dec4457aea20dcab88c94f">   29</a></span><span class="keywordtype">void</span> gf_draw_platform_end(<span class="keywordtype">void</span>) {}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">void</span> gf_draw_platform_end(<span class="keywordtype">void</span>) {}</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">void</span> gf_glfw_size(GLFWwindow* window, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h) {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw = (<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>*)glfwGetWindowUserPointer(window);</div>
@@ -139,8 +137,7 @@ $(document).ready(function(){initNavTree('glfw_2gf__draw_8c_source.html',''); in
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        gf_draw_reshape(draw);</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="gf__draw__platform_8h.html#a368f0172138b75a37072d1ed357b1183">   39</a></span><span class="keywordtype">int</span> gf_draw_platform_has_extension(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw, <span class="keyword">const</span> <span class="keywordtype">char</span>* query) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">int</span> gf_draw_platform_has_extension(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw, <span class="keyword">const</span> <span class="keywordtype">char</span>* query) {</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">const</span> <span class="keywordtype">char</span>* ext = NULL;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">const</span> <span class="keywordtype">char</span>* ptr;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">const</span> <span class="keywordtype">int</span>   len = strlen(query);</div>
@@ -149,10 +146,8 @@ $(document).ready(function(){initNavTree('glfw_2gf__draw_8c_source.html',''); in
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">return</span> glfwExtensionSupported(query);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
-</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="gf__draw__platform_8h.html#af006e1dd0055cd824dd61122454d6192">   49</a></span><span class="keywordtype">int</span> gf_draw_platform_step(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">int</span> gf_draw_platform_step(<a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw) {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">int</span> ret = 0;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">int</span> w, h;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        glfwMakeContextCurrent(draw-&gt;<a class="code hl_variable" href="structgf__draw__t.html#ab7893e83d1d13fe68efbed786df0ce5c">platform</a>-&gt;window);</div>
@@ -168,10 +163,8 @@ $(document).ready(function(){initNavTree('glfw_2gf__draw_8c_source.html',''); in
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
-</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="gf__draw__platform_8h.html#ae0d81adf1fa83413f5052dab1fc4793f">   66</a></span><a class="code hl_struct" href="structgf__draw__platform__t.html">gf_draw_platform_t</a>* gf_draw_platform_create(<a class="code hl_struct" href="structgf__engine__t.html">gf_engine_t</a>* engine, <a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><a class="code hl_struct" href="structgf__draw__platform__t.html">gf_draw_platform_t</a>* gf_draw_platform_create(<a class="code hl_struct" href="structgf__engine__t.html">gf_engine_t</a>* engine, <a class="code hl_struct" href="structgf__draw__t.html">gf_draw_t</a>* draw) {</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_struct" href="structgf__draw__platform__t.html">gf_draw_platform_t</a>* platform = malloc(<span class="keyword">sizeof</span>(*platform));</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        memset(platform, 0, <span class="keyword">sizeof</span>(*platform));</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        platform-&gt;engine = engine;</div>
@@ -192,17 +185,14 @@ $(document).ready(function(){initNavTree('glfw_2gf__draw_8c_source.html',''); in
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">return</span> platform;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
-</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="gf__draw__platform_8h.html#a24822bbf6cda6c2cbe336d70116dfb25">   88</a></span><span class="keywordtype">void</span> gf_draw_platform_destroy(<a class="code hl_struct" href="structgf__draw__platform__t.html">gf_draw_platform_t</a>* platform) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keywordtype">void</span> gf_draw_platform_destroy(<a class="code hl_struct" href="structgf__draw__platform__t.html">gf_draw_platform_t</a>* platform) {</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">if</span>(platform-&gt;window != NULL) {</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                glfwDestroyWindow(platform-&gt;window);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        }</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_define" href="gf__log_8h.html#a165a2d1cecbdd974b4a44450011bb84a">gf_log_function</a>(platform-&gt;engine, <span class="stringliteral">&quot;Destroyed platform-dependent part of drawing driver&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        free(platform);</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
-</div>
 <div class="ttc" id="agf__draw_8h_html"><div class="ttname"><a href="gf__draw_8h.html">gf_draw.h</a></div><div class="ttdoc">Drawing interface.</div></div>
 <div class="ttc" id="agf__draw__driver_8h_html"><div class="ttname"><a href="gf__draw__driver_8h.html">gf_draw_driver.h</a></div><div class="ttdoc">Drawing driver.</div></div>
 <div class="ttc" id="agf__draw__platform_8h_html"><div class="ttname"><a href="gf__draw__platform_8h.html">gf_draw_platform.h</a></div><div class="ttdoc">Platform-dependent part of drawing driver.</div></div>
@@ -210,7 +200,7 @@ $(document).ready(function(){initNavTree('glfw_2gf__draw_8c_source.html',''); in
 <div class="ttc" id="agf__log_8h_html_a165a2d1cecbdd974b4a44450011bb84a"><div class="ttname"><a href="gf__log_8h.html#a165a2d1cecbdd974b4a44450011bb84a">gf_log_function</a></div><div class="ttdeci">#define gf_log_function(engine, fmt,...)</div><div class="ttdoc">Output log with line number and function name.</div><div class="ttdef"><b>Definition</b> <a href="gf__log_8h_source.html#l00026">gf_log.h:26</a></div></div>
 <div class="ttc" id="agf__opengl_8h_html"><div class="ttname"><a href="gf__opengl_8h.html">gf_opengl.h</a></div><div class="ttdoc">OpenGL headers.</div></div>
 <div class="ttc" id="agf__pre_8h_html"><div class="ttname"><a href="gf__pre_8h.html">gf_pre.h</a></div><div class="ttdoc">Required headers before anything.</div></div>
-<div class="ttc" id="astructgf__draw__platform__t_html"><div class="ttname"><a href="structgf__draw__platform__t.html">gf_draw_platform_t</a></div><div class="ttdoc">Platform-dependent part of drawing driver.</div><div class="ttdef"><b>Definition</b> <a href="draw__platform_8h_source.html#l00054">draw_platform.h:54</a></div></div>
+<div class="ttc" id="astructgf__draw__platform__t_html"><div class="ttname"><a href="structgf__draw__platform__t.html">gf_draw_platform_t</a></div><div class="ttdoc">Platform-dependent part of drawing driver.</div><div class="ttdef"><b>Definition</b> <a href="draw__platform_8h_source.html#l00065">draw_platform.h:65</a></div></div>
 <div class="ttc" id="astructgf__draw__t_html"><div class="ttname"><a href="structgf__draw__t.html">gf_draw_t</a></div><div class="ttdoc">Drawing interface.</div><div class="ttdef"><b>Definition</b> <a href="draw_8h_source.html#l00101">draw.h:101</a></div></div>
 <div class="ttc" id="astructgf__draw__t_html_a24c971423b1befdce81738a39080b552"><div class="ttname"><a href="structgf__draw__t.html#a24c971423b1befdce81738a39080b552">gf_draw_t::title</a></div><div class="ttdeci">char title[128]</div><div class="ttdoc">Window title.</div><div class="ttdef"><b>Definition</b> <a href="draw_8h_source.html#l00101">draw.h:101</a></div></div>
 <div class="ttc" id="astructgf__draw__t_html_a923e76b7eba5d6bca1c92bea6a716adb"><div class="ttname"><a href="structgf__draw__t.html#a923e76b7eba5d6bca1c92bea6a716adb">gf_draw_t::close</a></div><div class="ttdeci">int close</div><div class="ttdoc">1 if it was requested to be closed, otherwise 0</div><div class="ttdef"><b>Definition</b> <a href="draw_8h_source.html#l00101">draw.h:101</a></div></div>

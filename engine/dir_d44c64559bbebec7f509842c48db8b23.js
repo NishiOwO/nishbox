@@ -3,6 +3,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "gf_type", "dir_e60f2706c8c207c5a951446d03370319.html", "dir_e60f2706c8c207c5a951446d03370319" ],
     [ "gf_client.h", "gf__client_8h.html", "gf__client_8h" ],
     [ "gf_core.h", "gf__core_8h.html", "gf__core_8h" ],
+    [ "gf_directx.h", "gf__directx_8h.html", null ],
     [ "gf_draw.h", "gf__draw_8h.html", "gf__draw_8h" ],
     [ "gf_draw_driver.h", "gf__draw__driver_8h.html", "gf__draw__driver_8h" ],
     [ "gf_draw_platform.h", "gf__draw__platform_8h.html", "gf__draw__platform_8h" ],

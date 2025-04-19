@@ -50,7 +50,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structgf__font__bbox__t.html#a2b45d905b5ba888912df8e50037b4727"
+"structgf__draw__t.html#adeb3586537ce39bf94c594dec0348346"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -142,31 +142,38 @@ $(document).ready(function(){initNavTree('gf__version_8c_source.html',''); initR
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#if defined(THREAD_WIN32)</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        strcpy(version-&gt;<a class="code hl_variable" href="structgf__version__t.html#adf3afb0a4b590b655d7e5ccd334bc51d">thread</a>, <span class="stringliteral">&quot;Win32&quot;</span>);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#elif defined(THREAD_POSIX)</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        strcpy(version-&gt;<a class="code hl_variable" href="structgf__version__t.html#adf3afb0a4b590b655d7e5ccd334bc51d">thread</a>, <span class="stringliteral">&quot;POSIX&quot;</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#if defined(DRV_DIRECTX)</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        strcpy(version-&gt;<a class="code hl_variable" href="structgf__version__t.html#ab555af19af1deaab5ddbe08b15f2b803">driver</a>, <span class="stringliteral">&quot;DirectX&quot;</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#if defined(USE_DX11)</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        strcpy(version-&gt;<a class="code hl_variable" href="structgf__version__t.html#a2a478dbfcd02eaead8b77aad204cfc0d">backend</a>, <span class="stringliteral">&quot;DirectX 11&quot;</span>);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        strcpy(cpstr, GF_VERSION);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">for</span>(i = 0;; i++) {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="keywordflow">if</span>(cpstr[i] == <span class="charliteral">&#39;.&#39;</span> || cpstr[i] == 0) {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                        <span class="keywordtype">int</span> num;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                        cpstr[i] = 0;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                        num      = atoi(cpstr + old);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                        <span class="keywordflow">if</span>(incr == 0) {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                                version-&gt;<a class="code hl_variable" href="structgf__version__t.html#a18c4ea6d16bd4d27da71586779ea3295">major</a> = num;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(incr == 1) {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                                version-&gt;<a class="code hl_variable" href="structgf__version__t.html#a573839ca44261b9ccbd73e43be57d326">minor</a> = num;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(incr == 2) {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                                version-&gt;<a class="code hl_variable" href="structgf__version__t.html#a4ae35b795688ecbcb98562b52ce03509">patch</a> = num;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                        }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                        old = i + 1;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                        incr++;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                        <span class="keywordflow">if</span>(incr == 3) <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#if defined(THREAD_WIN32)</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        strcpy(version-&gt;<a class="code hl_variable" href="structgf__version__t.html#adf3afb0a4b590b655d7e5ccd334bc51d">thread</a>, <span class="stringliteral">&quot;Win32&quot;</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#elif defined(THREAD_POSIX)</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        strcpy(version-&gt;<a class="code hl_variable" href="structgf__version__t.html#adf3afb0a4b590b655d7e5ccd334bc51d">thread</a>, <span class="stringliteral">&quot;POSIX&quot;</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        strcpy(cpstr, GF_VERSION);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">for</span>(i = 0;; i++) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <span class="keywordflow">if</span>(cpstr[i] == <span class="charliteral">&#39;.&#39;</span> || cpstr[i] == 0) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                        <span class="keywordtype">int</span> num;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                        cpstr[i] = 0;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                        num      = atoi(cpstr + old);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                        <span class="keywordflow">if</span>(incr == 0) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                version-&gt;<a class="code hl_variable" href="structgf__version__t.html#a18c4ea6d16bd4d27da71586779ea3295">major</a> = num;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(incr == 1) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                                version-&gt;<a class="code hl_variable" href="structgf__version__t.html#a573839ca44261b9ccbd73e43be57d326">minor</a> = num;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(incr == 2) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                                version-&gt;<a class="code hl_variable" href="structgf__version__t.html#a4ae35b795688ecbcb98562b52ce03509">patch</a> = num;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                        }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                        old = i + 1;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                        incr++;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                        <span class="keywordflow">if</span>(incr == 3) <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
 </div>
 <div class="ttc" id="agf__pre_8h_html"><div class="ttname"><a href="gf__pre_8h.html">gf_pre.h</a></div><div class="ttdoc">Required headers before anything.</div></div>
 <div class="ttc" id="agf__version_8h_html"><div class="ttname"><a href="gf__version_8h.html">gf_version.h</a></div><div class="ttdoc">Version.</div></div>
